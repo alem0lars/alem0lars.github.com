@@ -16,8 +16,8 @@ Source code of alem0lars website & blog. <br /> <br />
 
   <br />
 
-See the website in action » [here](https://alem0lars.github.com.alem0lars.com/) <br />
-For more information visit » [project page](https://github.com/alem0lars/alem0lars.github.com)
+See the website in action » [here][website] <br />
+For more information visit » [project page][project-page]
 
 ## Getting Started
 
@@ -55,7 +55,7 @@ FB_APP_ID=...
 $ npm run develop
 ```
 
-to hot-serve the website on [http://localhost:8000](http://localhost:8000) or:
+to hot-serve the website on [http://localhost:8000][develop-url] or:
 
 ```text
 gatsby build
@@ -91,7 +91,12 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 <!-- ----------------------------------------------------------------------- -->
 
 <!-- Personal -->
+[website]: https://alessandro.molari.me
 [github-alem0lars]: https://github.com/alem0lars
+[project-page]: https://github.com/alem0lars/alem0lars.github.com
+
+<!-- Development -->
+[develop-url]: http://localhost:8000
 
 <!-- Badges -->
 [coc-badge]: https://img.shields.io/badge/code%20of-conduct-ff69b4.svg?style=flat-square
