@@ -4,13 +4,13 @@ module.exports = {
   siteTitle: "PersonalBlog - a blog starter for GatsbyJS", // <title>
   shortSiteTitle: "PersonalBlog GatsbyJS Starter", // <title> ending for posts and pages
   siteDescription: "PersonalBlog is a GatsbyJS starter.",
-  siteUrl: "https://gatsby-starter-personal-blog.greglobinski.com",
+  siteUrl: "https://alessandro.molari.me",
   pathPrefix: "",
   siteImage: "preview.jpg",
   siteLanguage: "en",
   // author
   authorName: "greg lobinski",
-  authorTwitterAccount: "greglobinski",
+  authorTwitterAccount: "alem0lars",
   // info
   infoTitle: "greg lobinski",
   infoTitleNote: "personal blog",
@@ -25,8 +25,8 @@ module.exports = {
   contactEmail: "john@doe.com",
   // social
   authorSocialLinks: [
-    { name: "github", url: "https://github.com/greglobinski" },
-    { name: "twitter", url: "https://twitter.com/greglobinski" },
-    { name: "facebook", url: "http://facebook.com/greglobinski" }
+    { name: "github", url: "https://github.com/alem0lars" },
+    { name: "twitter", url: "https://twitter.com/alem0lars" },
+    { name: "facebook", url: "http://facebook.com/alem0lars" }
   ]
 };

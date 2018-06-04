@@ -1,8 +1,9 @@
 {
-  "name": "alem0lars.github.com",
+  "name": "alem0lars-website",
   "description": "alem0lars website & blog",
   "author": "Alessandro Molari <molari.alessandro@gmail.com>",
-  "repository": "https://github.com/greglobinski/gatsby-starter-personal-blog",
+  "repository": "https://github.com/alem0lars/alem0lars.github.com",
+  "private": true,
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
@@ -28,6 +29,7 @@
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-prettier": "^2.5.0",
     "eslint-plugin-react": "^7.8.2",
+    "gatsby": "^1.9.269",
     "gatsby-plugin-svgr": "^1.0.0",
     "prettier": "^1.12.1",
     "sharp-cli": "^1.7.0",
@@ -35,7 +37,6 @@
   },
   "dependencies": {
     "color": "^3.0.0",
-    "gatsby": "^1.9.260",
     "gatsby-image": "^1.0.51",
     "gatsby-link": "^1.6.44",
     "gatsby-plugin-algolia": "^0.0.3",

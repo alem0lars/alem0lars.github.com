@@ -14,7 +14,7 @@ If you already have an account go and open the [Apps](https://www.algolia.com/ma
 
 #### Front-end web development
 
-To read the whole instruction article - [Setup Algolia account for your GatsbyJS blog](https://dev.greglobinski.com/setup-algolia-account/) - you have to move to [Front-end web development with Greg](https://dev.greglobinski.com) website.
+To read the whole instruction article - [Setup Algolia account for your GatsbyJS blog](https://dev.alem0lars.com/setup-algolia-account/) - you have to move to [Front-end web development with Greg](https://dev.alem0lars.com) website.
 
 ...
 

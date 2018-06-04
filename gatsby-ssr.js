@@ -12,7 +12,11 @@ function minifyCssString(css) {
   return css.replace(/\n/g, "").replace(/\s\s+/g, " ");
 }
 
-exports.replaceRenderer = ({ bodyComponent, replaceBodyHTMLString, setHeadComponents }) => {
+exports.replaceRenderer = ({
+  bodyComponent,
+  replaceBodyHTMLString,
+  setHeadComponents
+}) => {
   const sheetsRegistry = new SheetsRegistry();
 
   const generateClassName = createGenerateClassName();
@@ -22,7 +26,10 @@ exports.replaceRenderer = ({ bodyComponent, replaceBodyHTMLString, setHeadCompon
   replaceBodyHTMLString(
     renderToString(
       <Provider store={store}>
-        <JssProvider registry={sheetsRegistry} generateClassName={generateClassName}>
+        <JssProvider
+          registry={sheetsRegistry}
+          generateClassName={generateClassName}
+        >
           <MuiThemeProvider theme={theme} sheetsManager={new Map()}>
             {bodyComponent}
           </MuiThemeProvider>
@@ -36,7 +43,9 @@ exports.replaceRenderer = ({ bodyComponent, replaceBodyHTMLString, setHeadCompon
       type="text/css"
       id="server-side-jss"
       key="server-side-jss"
-      dangerouslySetInnerHTML={{ __html: minifyCssString(sheetsRegistry.toString()) }}
+      dangerouslySetInnerHTML={{
+        __html: minifyCssString(sheetsRegistry.toString())
+      }}
     />
   ]);
 };
@@ -53,7 +62,9 @@ exports.onRenderBody = ({ setPostBodyComponents }) => {
         __html: `
         WebFontConfig = {
           google: {
-            families: ["${theme.base.fonts.styledFamily}:${theme.base.fonts.styledFonts}"]
+            families: ["${theme.base.fonts.styledFamily}:${
+          theme.base.fonts.styledFonts
+        }"]
           }
         };
 

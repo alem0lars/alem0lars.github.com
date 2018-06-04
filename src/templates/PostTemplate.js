@@ -26,7 +26,12 @@ class PostTemplate extends React.Component {
 
     return (
       <Main>
-        <Post post={data.post} slug={pathContext.slug} author={data.author} facebook={facebook} />
+        <Post
+          post={data.post}
+          slug={pathContext.slug}
+          author={data.author}
+          facebook={facebook}
+        />
         <Footer footnote={data.footnote} />
         <Seo data={data.post} facebook={facebook} />
       </Main>
@@ -54,7 +59,10 @@ const mapDispatchToProps = {
   setNavigatorShape
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(PostTemplate);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(PostTemplate);
 
 //eslint-disable-next-line no-undef
 export const postQuery = graphql`

@@ -1,6 +1,6 @@
-# PersonalBlog
+# alem0lars website
 
-A [GatsbyJS](https://www.gatsbyjs.org/) personal blog starter. <br /><br />
+Source code of alem0lars website & blog. <br /> <br />
 
 [![GitHub license][mit-badge]][mit]
 [![GitHub tag][tag-badge]][tag]
@@ -13,78 +13,33 @@ A [GatsbyJS](https://www.gatsbyjs.org/) personal blog starter. <br /><br />
 
   <br />
 
-![](static/screens/gatsby-starter-personal-blog.gif) <br />
+![](static/screens/alem0lars.github.com.gif) <br />
 
   <br />
 
-See the starter in action » [demo website](https://gatsby-starter-personal-blog.greglobinski.com/) <br />For more information visit » [dev.greglobinski.com/gatsby-starter-personal-blog](https://dev.greglobinski.com/gatsby-starter-personal-blog/)
+See the website in action » [here](https://alem0lars.github.com.alem0lars.com/) <br />
+For more information visit » [project page](https://github.com/alem0lars/alem0lars.github.com)
 
-## Description
+## Getting Started
 
-A ready to use, easy to customize [GatsbyJS](https://github.com/gatsbyjs/gatsby) personal blog starter with 'like app' layout transitions.
+The website uses [Gatsby][gatsby] and
+the starter [gatsby-starter-personal-blog][gatsby-starter-personal-blog]
 
-## Features:
+### Setup
 
-* Customizable
-* Easy editable content in Markdown files (posts, pages and parts)
-* Easily restyled through theme object
-* Styling with JSS
-* Comments (Facebook)
-* Post categories
-* Post list filtering
-* Full text searching (Algolia)
-* Contact form (Netlify form handling)
-* Material UI (@next)
-* RSS feed
-* Full screen mode
-* User adjustable articles’ body copy font size
-* Social sharing (Twitter, Facebook, Google, LinkedIn)
-* PWA (manifes.json, offline support, favicons)
-* Google Analytics
-* Favicons generator (node script)
-* Components lazy loading with AsyncComponent (social sharing, info box)
-* ESLint (google config)
-* Prettier code styling
-* Custom webpack CommonsChunkPlugin settings
-* Webpack BundleAnalyzerPlugin
+After cloning the repository, run:
 
-## Prerequisites
-
-If you do not have Gatsby Cli installed yet, do it first.
-
-```text
-npm install --global gatsby-cli
+```shell-session
+$ npm i
 ```
 
-More information on [GatsbyJS.org](https://www.gatsbyjs.org/tutorial/part-one)
+#### External services
 
-## Getting started
+The website uses external services for comments, searching, analytics.
+To use them you have to secure some access data.
 
-Install the starter using Gatsby Cli `gatsby new` command.
-
-```text
-gatsby new [NEW_SITE_DIRECTORY_FOR_YOUR_BLOG] https://github.com/greglobinski/gatsby-starter-personal-blog.git
-```
-
-Go into the newly created directory and run
-
-```text
-gatsby develop
-```
-
-to hot-serve your website on http://localhost:8000 or
-
-```text
-gatsby build
-```
-
-to create static site ready to host (/public).
-
-##### External services
-
-The starter uses external services for some functions: comments, searching, analytics. To use them you have to secure some access data. All services are free to use or have generous free tiers big enough for a personal blog.
-
-Create an `.env` file like below in the root folder. Change `...` placeholders with real data.
+Create an `.env` file like below in the root folder.
+Change `...` placeholders with real data.
 
 ```text
 GOOGLE_ANALYTICS_ID=...
@@ -95,22 +50,23 @@ ALGOLIA_INDEX_NAME=...
 FB_APP_ID=...
 ```
 
-##### Packages in beta stage
+### Development
 
-The starter uses two third party packages still in beta stage: [gatsby-plugin-algolia](https://github.com/algolia/gatsby-plugin-algolia) and [material-ui-next](https://material-ui-next.com/)
+```text
+$ npm run develop
+```
 
-### Instructions & tutorials
+to hot-serve the website on [http://localhost:8000](http://localhost:8000) or:
 
-* [How to install, setup and add new content to a Blog starter](https://dev.greglobinski.com/install-blog-starter/)
-* [How to customize the PersonalBlog starter's appearance](https://dev.greglobinski.com/customize-personal-blog-starter/)
-* [Setup Algolia account for your GatsbyJS blog](https://dev.greglobinski.com/setup-algolia-account/)
-* More articles soon at [Front-end web development with Greg](https://dev.greglobinski.com/install-personal-blog-starter/)
+```text
+gatsby build
+```
+
+to create static site ready to host (`/public`).
 
 ## Authors
 
-* Greg Lobinski [@greglobinski](https://github.com/greglobinski)
-
-See also the list of [contributors](https://github.com/greglobinski/gatsby-starter-personal-blog/graphs/contributors) who participated in this project.
+* Alessandro Molari [@alem0lars](https://github.com/alem0lars)
 
 ## Contributing
 
@@ -124,7 +80,7 @@ See also the list of [contributors](https://github.com/greglobinski/gatsby-start
 
 MIT License
 
-Copyright (c) 2017 gatsbyjs <br />Copyright (c) 2018 greg lobinski
+Copyright (c) 2018 alem0lars <br />Copyright (c) 2018 Alessandro Molari
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
@@ -134,17 +90,20 @@ The above copyright notice and this permission notice shall be included in all c
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 [coc-badge]: https://img.shields.io/badge/code%20of-conduct-ff69b4.svg?style=flat-square
-[coc]: https://github.com/greglobinski/gatsby-starter-personal-blog/blob/master/CODE_OF_CONDUCT.md
+[coc]: https://github.com/alem0lars/alem0lars.github.com/blob/master/CODE_OF_CONDUCT.md
 [prs-badge]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square
 [prs]: http://makeapullrequest.com
-[twitter]: https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2Fgreglobinski%2Fgatsby-starter-personal-blog
-[twitter-badge]: https://img.shields.io/twitter/url/https/github.com/greglobinski/gatsby-starter-personal-blog.svg?style=social
-[tag-badge]: https://img.shields.io/github/tag/greglobinski/gatsby-starter-personal-blog.svg
-[tag]: https://github.com/greglobinski/gatsby-starter-personal-blog
-[stars-badge]: https://img.shields.io/github/stars/greglobinski/gatsby-starter-personal-blog.svg
-[stars]: https://github.com/greglobinski/gatsby-starter-personal-blog/stargazers
-[contributors-badge]: https://img.shields.io/github/contributors/greglobinski/gatsby-starter-personal-blog.svg
+[twitter]: https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2Falem0lars%2Falem0lars.github.com
+[twitter-badge]: https://img.shields.io/twitter/url/https/github.com/alem0lars/alem0lars.github.com.svg?style=social
+[tag-badge]: https://img.shields.io/github/tag/alem0lars/alem0lars.github.com.svg
+[tag]: https://github.com/alem0lars/alem0lars.github.com
+[stars-badge]: https://img.shields.io/github/stars/alem0lars/alem0lars.github.com.svg
+[stars]: https://github.com/alem0lars/alem0lars.github.com/stargazers
+[contributors-badge]: https://img.shields.io/github/contributors/alem0lars/alem0lars.github.com.svg
 [prettier-badge]: https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square
 [prettier]: https://github.com/prettier/prettier
-[mit-badge]: https://img.shields.io/github/license/greglobinski/gatsby-starter-personal-blog.svg
-[mit]: https://github.com/greglobinski/gatsby-starter-personal-blog/blob/master/LICENSE
+[mit-badge]: https://img.shields.io/github/license/alem0lars/alem0lars.github.com.svg
+[mit]: https://github.com/alem0lars/alem0lars.github.com/blob/master/LICENSE
+
+[gatsby]: https://www.gatsbyjs.org
+[gatsby-starter-personal-blog]: https://github.com/greglobinski/gatsby-starter-personal-blog

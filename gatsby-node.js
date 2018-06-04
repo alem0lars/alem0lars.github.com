@@ -35,7 +35,10 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
       graphql(
         `
           {
-            allMarkdownRemark(filter: { id: { regex: "//posts|pages//" } }, limit: 1000) {
+            allMarkdownRemark(
+              filter: { id: { regex: "//posts|pages//" } }
+              limit: 1000
+            ) {
               edges {
                 node {
                   id
@@ -76,24 +79,33 @@ exports.modifyWebpackConfig = ({ config, stage }) => {
   switch (stage) {
     case "build-javascript":
       {
-        let components = store.getState().pages.map(page => page.componentChunkName);
+        let components = store
+          .getState()
+          .pages.map(page => page.componentChunkName);
         components = _.uniq(components);
-        config.plugin("CommonsChunkPlugin", webpack.optimize.CommonsChunkPlugin, [
-          {
-            name: `commons`,
-            chunks: [`app`, ...components],
-            minChunks: (module, count) => {
-              const vendorModuleList = []; // [`material-ui`, `lodash`];
-              const isFramework = _.some(
-                vendorModuleList.map(vendor => {
-                  const regex = new RegExp(`[\\\\/]node_modules[\\\\/]${vendor}[\\\\/].*`, `i`);
-                  return regex.test(module.resource);
-                })
-              );
-              return isFramework || count > 1;
+        config.plugin(
+          "CommonsChunkPlugin",
+          webpack.optimize.CommonsChunkPlugin,
+          [
+            {
+              name: `commons`,
+              chunks: [`app`, ...components],
+              minChunks: (module, count) => {
+                const vendorModuleList = []; // [`material-ui`, `lodash`];
+                const isFramework = _.some(
+                  vendorModuleList.map(vendor => {
+                    const regex = new RegExp(
+                      `[\\\\/]node_modules[\\\\/]${vendor}[\\\\/].*`,
+                      `i`
+                    );
+                    return regex.test(module.resource);
+                  })
+                );
+                return isFramework || count > 1;
+              }
             }
-          }
-        ]);
+          ]
+        );
         // config.plugin("BundleAnalyzerPlugin", BundleAnalyzerPlugin, [
         //   {
         //     analyzerMode: "static",
@@ -112,6 +124,9 @@ exports.modifyWebpackConfig = ({ config, stage }) => {
 exports.modifyBabelrc = ({ babelrc }) => {
   return {
     ...babelrc,
-    plugins: babelrc.plugins.concat([`syntax-dynamic-import`, `dynamic-import-webpack`])
+    plugins: babelrc.plugins.concat([
+      `syntax-dynamic-import`,
+      `dynamic-import-webpack`
+    ])
   };
 };
