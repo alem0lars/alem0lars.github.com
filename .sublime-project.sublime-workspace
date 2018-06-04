@@ -1,0 +1,286 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"format",
+				"ESLint Formatter: Format this file"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				":w",
+				":w - Save"
+			],
+			[
+				"preview",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"fromat",
+				"ESLint Formatter: Format this file"
+			],
+			[
+				"remov",
+				"Package Control: Remove Package"
+			],
+			[
+				"sublime",
+				"Preferences: SublimeLinter Settings"
+			],
+			[
+				"sublimelinter settings",
+				"Preferences: SublimeLinter Settings"
+			],
+			[
+				"instlal",
+				"Package Control: Install Package"
+			],
+			[
+				"select c",
+				"UI: Select Color Scheme"
+			],
+			[
+				"select theme",
+				"UI: Select Theme"
+			],
+			[
+				"Package Control: remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"settings",
+				"Preferences: Settings"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/data/projects/work/self/website"
+	],
+	"file_history":
+	[
+		"/data/projects/work/self/website/.sublime-project",
+		"/data/projects/work/self/website/src/html.js",
+		"/data/projects/work/self/website/src/favicon.png",
+		"/data/projects/work/self/website/package-lock.json",
+		"/data/projects/work/self/website/LICENSE",
+		"/data/projects/work/self/website/gatsby-ssr.js",
+		"/data/projects/work/self/website/gatsby-node.js",
+		"/data/projects/work/self/website/gatsby-config.js",
+		"/data/projects/work/self/website/gatsby-browser.js",
+		"/data/projects/work/self/website/.prettierrc.json",
+		"/data/projects/work/self/website/stats.json",
+		"/data/projects/work/self/website/webpack-stats.json",
+		"/data/projects/work/self/website/README.md",
+		"/data/projects/work/self/website/.editorconfig",
+		"/data/projects/work/self/website/.babelrc",
+		"/data/projects/work/self/website/.eslintignore",
+		"/data/projects/work/self/website/.eslintrc.json",
+		"/data/projects/work/self/website/.gitignore",
+		"/data/projects/work/self/website/.env",
+		"/data/projects/work/self/website/package.json",
+		"/data/projects/work/self/website/content/parts/footnote.md",
+		"/data/projects/work/self/website/content/parts/info.md",
+		"/data/projects/work/self/website/content/parts/author.md",
+		"/data/projects/work/self/website/content/pages/1--about/index.md",
+		"/data/projects/work/self/website/scripts/deploy.sh",
+		"/data/projects/work/self/website/content/pages/success/index.md",
+		"/data/projects/work/self/website/node_modules/gatsby/node_modules/dotenv/README.md",
+		"/data/projects/work/self/website/CODE_OF_CONDUCT.md",
+		"/data/projects/work/self/website/content/meta/config.js",
+		"/data/projects/work/self/website/content/pages/2--starters/index.md",
+		"/data/projects/work/self/website/content/posts/2018-03-28--install-personal-blog-starter/index.md",
+		"/data/projects/work/self/website/content/posts/2018-04-02--customize-personal-blog-starter/index.md",
+		"/data/projects/work/self/website/content/posts/2018-03-29--setup-algolia-account/index.md",
+		"/data/projects/work/self/website/src/styles/new-theme.js",
+		"/data/projects/work/self/website/static/robots.txt",
+		"/data/projects/work/self/website/src/utils/helpers.js",
+		"/data/projects/work/self/website/src/templates/PostTemplate.js",
+		"/data/projects/work/self/website/src/templates/PageTemplate.js",
+		"/home/alem0lars/.config/sublime-text-3/Packages/ESLint-Formatter/ESLint-Formatter.sublime-settings",
+		"/home/alem0lars/.config/sublime-text-3/Packages/User/Side Bar.sublime-settings",
+		"/home/alem0lars/.config/sublime-text-3/Packages/SideBarEnhancements/Side Bar.sublime-settings",
+		"/home/alem0lars/.config/sublime-text-3/Packages/Emmet/Emmet.sublime-settings",
+		"/home/alem0lars/.config/sublime-text-3/Packages/User/Emmet.sublime-settings"
+	],
+	"find":
+	{
+		"height": 59.0
+	},
+	"find_in_files":
+	{
+		"height": 267.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"coc-badge",
+			"source",
+			"master",
+			".env file",
+			"gatsby-starter-personal-blog",
+			"greglobinski",
+			"alem0lars",
+			"greglobinski"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"alem0lars.github.com",
+			"alem0lars"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 59.0
+	},
+	"input":
+	{
+		"height": 107.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.SublimeLinter":
+	{
+		"height": 0.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": ".sublime-project",
+	"replace":
+	{
+		"height": 110.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 665.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

@@ -29,7 +29,8 @@ the starter [gatsby-starter-personal-blog][gatsby-starter-personal-blog]
 Clone the repository:
 
 ```shell-session
-$ git clone --recurse-submodules git@github.com:alem0lars/alem0lars.github.com website
+$ git clone -b source git@github.com:alem0lars/alem0lars.github.com website
+$ git remote add upstream https://github.com/greglobinski/gatsby-starter-personal-blog
 ```
 
 Or if you've already cloned the repository, you must update submodules:
