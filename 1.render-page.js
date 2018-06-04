@@ -48,19 +48,19 @@ exports.modules = {
 	
 	var _SocialIcons2 = _interopRequireDefault(_SocialIcons);
 	
-	var _InfoMenu = __webpack_require__(670);
+	var _InfoMenu = __webpack_require__(672);
 	
 	var _InfoMenu2 = _interopRequireDefault(_InfoMenu);
 	
-	var _InfoHeader = __webpack_require__(671);
+	var _InfoHeader = __webpack_require__(673);
 	
 	var _InfoHeader2 = _interopRequireDefault(_InfoHeader);
 	
-	var _InfoText = __webpack_require__(673);
+	var _InfoText = __webpack_require__(675);
 	
 	var _InfoText2 = _interopRequireDefault(_InfoText);
 	
-	var _StackIcons = __webpack_require__(674);
+	var _StackIcons = __webpack_require__(676);
 	
 	var _StackIcons2 = _interopRequireDefault(_StackIcons);
 	
@@ -76,7 +76,7 @@ exports.modules = {
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-	__webpack_require__(685);
+	__webpack_require__(687);
 	
 	var styles = function styles(theme) {
 	  var _infoBox;
@@ -235,6 +235,10 @@ exports.modules = {
 	
 	var _twitter = __webpack_require__(669);
 	
+	var _linkedin = __webpack_require__(670);
+	
+	var _instagram = __webpack_require__(671);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	var styles = function styles(theme) {
@@ -254,8 +258,8 @@ exports.modules = {
 	      }
 	    },
 	    svg: {
-	      width: "40px",
-	      height: "40px",
+	      width: "30px",
+	      height: "30px",
 	      fill: theme.info.colors.socialIcons,
 	      transition: "all .5s"
 	    }
@@ -269,7 +273,9 @@ exports.modules = {
 	  var icons = {
 	    twitter: _twitter.ReactComponent,
 	    facebook: _facebook.ReactComponent,
-	    github: _github.ReactComponent
+	    github: _github.ReactComponent,
+	    linkedin: _linkedin.ReactComponent,
+	    instagram: _instagram.ReactComponent
 	  };
 	
 	  return _react2.default.createElement(
@@ -332,17 +338,22 @@ exports.modules = {
 	
 	var _ref =
 	/*#__PURE__*/
+	_react2.default.createElement("title", null, "GitHub icon");
+	
+	var _ref2 =
+	/*#__PURE__*/
 	_react2.default.createElement("path", {
-	  d: "M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9v-34.7c-51.7 11.3-62.5-21.9-62.5-21.9-8.4-21.5-20.6-27.2-20.6-27.2-16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9-41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9-1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4v51c0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4 0-102.5-83.3-185.7-185.9-185.7z"
+	  d: "M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
 	});
 	
 	var SvgComponent = function SvgComponent(props) {
 	  return _react2.default.createElement("svg", _extends({
-	    viewBox: "0 0 512 512"
-	  }, props), _ref);
+	    "aria-labelledby": "simpleicons-github-icon",
+	    viewBox: "0 0 24 24"
+	  }, props), _ref, _ref2);
 	};
 	
-	exports.default = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cGF0aCBkPSJNMjU2IDcwLjdjLTEwMi42IDAtMTg1LjkgODMuMi0xODUuOSAxODUuOSAwIDgyLjEgNTMuMyAxNTEuOCAxMjcuMSAxNzYuNCA5LjMgMS43IDEyLjMtNCAxMi4zLTguOVYzODkuNGMtNTEuNyAxMS4zLTYyLjUtMjEuOS02Mi41LTIxLjkgLTguNC0yMS41LTIwLjYtMjcuMi0yMC42LTI3LjIgLTE2LjktMTEuNSAxLjMtMTEuMyAxLjMtMTEuMyAxOC43IDEuMyAyOC41IDE5LjIgMjguNSAxOS4yIDE2LjYgMjguNCA0My41IDIwLjIgNTQuMSAxNS40IDEuNy0xMiA2LjUtMjAuMiAxMS44LTI0LjkgLTQxLjMtNC43LTg0LjctMjAuNi04NC43LTkxLjkgMC0yMC4zIDcuMy0zNi45IDE5LjItNDkuOSAtMS45LTQuNy04LjMtMjMuNiAxLjgtNDkuMiAwIDAgMTUuNi01IDUxLjEgMTkuMSAxNC44LTQuMSAzMC43LTYuMiA0Ni41LTYuMyAxNS44IDAuMSAzMS43IDIuMSA0Ni42IDYuMyAzNS41LTI0IDUxLjEtMTkuMSA1MS4xLTE5LjEgMTAuMSAyNS42IDMuOCA0NC41IDEuOCA0OS4yIDExLjkgMTMgMTkuMSAyOS42IDE5LjEgNDkuOSAwIDcxLjQtNDMuNSA4Ny4xLTg0LjkgOTEuNyA2LjcgNS44IDEyLjggMTcuMSAxMi44IDM0LjQgMCAyNC45IDAgNDQuOSAwIDUxIDAgNC45IDMgMTAuNyAxMi40IDguOSA3My44LTI0LjYgMTI3LTk0LjMgMTI3LTE3Ni40QzQ0MS45IDE1My45IDM1OC42IDcwLjcgMjU2IDcwLjd6Ii8+PC9zdmc+Cg==";
+	exports.default = "data:image/svg+xml;base64,PHN2ZyBhcmlhLWxhYmVsbGVkYnk9InNpbXBsZWljb25zLWdpdGh1Yi1pY29uIiByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGUgaWQ9InNpbXBsZWljb25zLWdpdGh1Yi1pY29uIj5HaXRIdWIgaWNvbjwvdGl0bGU+PHBhdGggZD0iTTEyIC4yOTdjLTYuNjMgMC0xMiA1LjM3My0xMiAxMiAwIDUuMzAzIDMuNDM4IDkuOCA4LjIwNSAxMS4zODUuNi4xMTMuODItLjI1OC44Mi0uNTc3IDAtLjI4NS0uMDEtMS4wNC0uMDE1LTIuMDQtMy4zMzguNzI0LTQuMDQyLTEuNjEtNC4wNDItMS42MUM0LjQyMiAxOC4wNyAzLjYzMyAxNy43IDMuNjMzIDE3LjdjLTEuMDg3LS43NDQuMDg0LS43MjkuMDg0LS43MjkgMS4yMDUuMDg0IDEuODM4IDEuMjM2IDEuODM4IDEuMjM2IDEuMDcgMS44MzUgMi44MDkgMS4zMDUgMy40OTUuOTk4LjEwOC0uNzc2LjQxNy0xLjMwNS43Ni0xLjYwNS0yLjY2NS0uMy01LjQ2Ni0xLjMzMi01LjQ2Ni01LjkzIDAtMS4zMS40NjUtMi4zOCAxLjIzNS0zLjIyLS4xMzUtLjMwMy0uNTQtMS41MjMuMTA1LTMuMTc2IDAgMCAxLjAwNS0uMzIyIDMuMyAxLjIzLjk2LS4yNjcgMS45OC0uMzk5IDMtLjQwNSAxLjAyLjAwNiAyLjA0LjEzOCAzIC40MDUgMi4yOC0xLjU1MiAzLjI4NS0xLjIzIDMuMjg1LTEuMjMuNjQ1IDEuNjUzLjI0IDIuODczLjEyIDMuMTc2Ljc2NS44NCAxLjIzIDEuOTEgMS4yMyAzLjIyIDAgNC42MS0yLjgwNSA1LjYyNS01LjQ3NSA1LjkyLjQyLjM2LjgxIDEuMDk2LjgxIDIuMjIgMCAxLjYwNi0uMDE1IDIuODk2LS4wMTUgMy4yODYgMCAuMzE1LjIxLjY5LjgyNS41N0MyMC41NjUgMjIuMDkyIDI0IDE3LjU5MiAyNCAxMi4yOTdjMC02LjYyNy01LjM3My0xMi0xMi0xMiIvPjwvc3ZnPg==";
 	exports.ReactComponent = SvgComponent;
 
 /***/ }),
@@ -377,17 +388,22 @@ exports.modules = {
 	
 	var _ref =
 	/*#__PURE__*/
+	_react2.default.createElement("title", null, "Facebook icon");
+	
+	var _ref2 =
+	/*#__PURE__*/
 	_react2.default.createElement("path", {
-	  d: "M211.9 197.4h-36.7v59.9h36.7v175.8h70.5V256.5h49.2l5.2-59.1h-54.4v-33.7c0-13.9 2.8-19.5 16.3-19.5h38.2V82.9h-48.8c-52.5 0-76.1 23.1-76.1 67.3-.1 38.6-.1 47.2-.1 47.2z"
+	  d: "M22.676 0H1.324C.593 0 0 .593 0 1.324v21.352C0 23.408.593 24 1.324 24h11.494v-9.294H9.689v-3.621h3.129V8.41c0-3.099 1.894-4.785 4.659-4.785 1.325 0 2.464.097 2.796.141v3.24h-1.921c-1.5 0-1.792.721-1.792 1.771v2.311h3.584l-.465 3.63H16.56V24h6.115c.733 0 1.325-.592 1.325-1.324V1.324C24 .593 23.408 0 22.676 0"
 	});
 	
 	var SvgComponent = function SvgComponent(props) {
 	  return _react2.default.createElement("svg", _extends({
-	    viewBox: "0 0 512 512"
-	  }, props), _ref);
+	    "aria-labelledby": "simpleicons-facebook-icon",
+	    viewBox: "0 0 24 24"
+	  }, props), _ref, _ref2);
 	};
 	
-	exports.default = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cGF0aCBkPSJNMjExLjkgMTk3LjRoLTM2Ljd2NTkuOWgzNi43VjQzMy4xaDcwLjVWMjU2LjVoNDkuMmw1LjItNTkuMWgtNTQuNGMwIDAgMC0yMi4xIDAtMzMuNyAwLTEzLjkgMi44LTE5LjUgMTYuMy0xOS41IDEwLjkgMCAzOC4yIDAgMzguMiAwVjgyLjljMCAwLTQwLjIgMC00OC44IDAgLTUyLjUgMC03Ni4xIDIzLjEtNzYuMSA2Ny4zQzIxMS45IDE4OC44IDIxMS45IDE5Ny40IDIxMS45IDE5Ny40eiIvPjwvc3ZnPgo=";
+	exports.default = "data:image/svg+xml;base64,PHN2ZyBhcmlhLWxhYmVsbGVkYnk9InNpbXBsZWljb25zLWZhY2Vib29rLWljb24iIHJvbGU9ImltZyIgdmlld0JveD0iMCAwIDI0IDI0IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjx0aXRsZSBpZD0ic2ltcGxlaWNvbnMtZmFjZWJvb2staWNvbiI+RmFjZWJvb2sgaWNvbjwvdGl0bGU+PHBhdGggZD0iTTIyLjY3NiAwSDEuMzI0Qy41OTMgMCAwIC41OTMgMCAxLjMyNHYyMS4zNTJDMCAyMy40MDguNTkzIDI0IDEuMzI0IDI0aDExLjQ5NHYtOS4yOTRIOS42ODl2LTMuNjIxaDMuMTI5VjguNDFjMC0zLjA5OSAxLjg5NC00Ljc4NSA0LjY1OS00Ljc4NSAxLjMyNSAwIDIuNDY0LjA5NyAyLjc5Ni4xNDF2My4yNGgtMS45MjFjLTEuNSAwLTEuNzkyLjcyMS0xLjc5MiAxLjc3MXYyLjMxMWgzLjU4NGwtLjQ2NSAzLjYzSDE2LjU2VjI0aDYuMTE1Yy43MzMgMCAxLjMyNS0uNTkyIDEuMzI1LTEuMzI0VjEuMzI0QzI0IC41OTMgMjMuNDA4IDAgMjIuNjc2IDAiLz48L3N2Zz4=";
 	exports.ReactComponent = SvgComponent;
 
 /***/ }),
@@ -422,22 +438,127 @@ exports.modules = {
 	
 	var _ref =
 	/*#__PURE__*/
+	_react2.default.createElement("title", null, "Twitter icon");
+	
+	var _ref2 =
+	/*#__PURE__*/
 	_react2.default.createElement("path", {
-	  d: "M419.6 168.6c-11.7 5.2-24.2 8.7-37.4 10.2 13.4-8.1 23.8-20.8 28.6-36-12.6 7.5-26.5 12.9-41.3 15.8C357.6 146 340.7 138 322 138c-42 0-72.9 39.2-63.4 79.9-54.1-2.7-102.1-28.6-134.2-68-17 29.2-8.8 67.5 20.1 86.9-10.7-.3-20.7-3.3-29.5-8.1-.7 30.2 20.9 58.4 52.2 64.6-9.2 2.5-19.2 3.1-29.4 1.1 8.3 25.9 32.3 44.7 60.8 45.2-27.4 21.4-61.8 31-96.4 27 28.8 18.5 63 29.2 99.8 29.2 120.8 0 189.1-102.1 185-193.6 12.9-9.1 23.9-20.5 32.6-33.6z"
+	  d: "M23.954 4.569a10 10 0 0 1-2.825.775 4.958 4.958 0 0 0 2.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 0 0-8.384 4.482C7.691 8.094 4.066 6.13 1.64 3.161a4.822 4.822 0 0 0-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 0 1-2.228-.616v.061a4.923 4.923 0 0 0 3.946 4.827 4.996 4.996 0 0 1-2.212.085 4.937 4.937 0 0 0 4.604 3.417 9.868 9.868 0 0 1-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 0 0 7.557 2.209c9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63a9.936 9.936 0 0 0 2.46-2.548l-.047-.02z"
 	});
 	
 	var SvgComponent = function SvgComponent(props) {
 	  return _react2.default.createElement("svg", _extends({
-	    viewBox: "0 0 512 512"
-	  }, props), _ref);
+	    "aria-labelledby": "simpleicons-twitter-icon",
+	    viewBox: "0 0 24 24"
+	  }, props), _ref, _ref2);
 	};
 	
-	exports.default = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cGF0aCBkPSJNNDE5LjYgMTY4LjZjLTExLjcgNS4yLTI0LjIgOC43LTM3LjQgMTAuMiAxMy40LTguMSAyMy44LTIwLjggMjguNi0zNiAtMTIuNiA3LjUtMjYuNSAxMi45LTQxLjMgMTUuOCAtMTEuOS0xMi42LTI4LjgtMjAuNi00Ny41LTIwLjYgLTQyIDAtNzIuOSAzOS4yLTYzLjQgNzkuOSAtNTQuMS0yLjctMTAyLjEtMjguNi0xMzQuMi02OCAtMTcgMjkuMi04LjggNjcuNSAyMC4xIDg2LjkgLTEwLjctMC4zLTIwLjctMy4zLTI5LjUtOC4xIC0wLjcgMzAuMiAyMC45IDU4LjQgNTIuMiA2NC42IC05LjIgMi41LTE5LjIgMy4xLTI5LjQgMS4xIDguMyAyNS45IDMyLjMgNDQuNyA2MC44IDQ1LjIgLTI3LjQgMjEuNC02MS44IDMxLTk2LjQgMjcgMjguOCAxOC41IDYzIDI5LjIgOTkuOCAyOS4yIDEyMC44IDAgMTg5LjEtMTAyLjEgMTg1LTE5My42QzM5OS45IDE5My4xIDQxMC45IDE4MS43IDQxOS42IDE2OC42eiIvPjwvc3ZnPgo=";
+	exports.default = "data:image/svg+xml;base64,PHN2ZyBhcmlhLWxhYmVsbGVkYnk9InNpbXBsZWljb25zLXR3aXR0ZXItaWNvbiIgcm9sZT0iaW1nIiB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHRpdGxlIGlkPSJzaW1wbGVpY29ucy10d2l0dGVyLWljb24iPlR3aXR0ZXIgaWNvbjwvdGl0bGU+PHBhdGggZD0iTTIzLjk1NCA0LjU2OWMtLjg4NS4zODktMS44My42NTQtMi44MjUuNzc1IDEuMDE0LS42MTEgMS43OTQtMS41NzQgMi4xNjMtMi43MjMtLjk1MS41NTUtMi4wMDUuOTU5LTMuMTI3IDEuMTg0LS44OTYtLjk1OS0yLjE3My0xLjU1OS0zLjU5MS0xLjU1OS0yLjcxNyAwLTQuOTIgMi4yMDMtNC45MiA0LjkxNyAwIC4zOS4wNDUuNzY1LjEyNyAxLjEyNEM3LjY5MSA4LjA5NCA0LjA2NiA2LjEzIDEuNjQgMy4xNjFjLS40MjcuNzIyLS42NjYgMS41NjEtLjY2NiAyLjQ3NSAwIDEuNzEuODcgMy4yMTMgMi4xODggNC4wOTYtLjgwNy0uMDI2LTEuNTY2LS4yNDgtMi4yMjgtLjYxNnYuMDYxYzAgMi4zODUgMS42OTMgNC4zNzQgMy45NDYgNC44MjctLjQxMy4xMTEtLjg0OS4xNzEtMS4yOTYuMTcxLS4zMTQgMC0uNjE1LS4wMy0uOTE2LS4wODYuNjMxIDEuOTUzIDIuNDQ1IDMuMzc3IDQuNjA0IDMuNDE3LTEuNjggMS4zMTktMy44MDkgMi4xMDUtNi4xMDIgMi4xMDUtLjM5IDAtLjc3OS0uMDIzLTEuMTctLjA2NyAyLjE4OSAxLjM5NCA0Ljc2OCAyLjIwOSA3LjU1NyAyLjIwOSA5LjA1NCAwIDEzLjk5OS03LjQ5NiAxMy45OTktMTMuOTg2IDAtLjIwOSAwLS40Mi0uMDE1LS42My45NjEtLjY4OSAxLjgtMS41NiAyLjQ2LTIuNTQ4bC0uMDQ3LS4wMnoiLz48L3N2Zz4=";
 	exports.ReactComponent = SvgComponent;
 
 /***/ }),
 
 /***/ 670:
+/***/ (function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.ReactComponent = undefined;
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _extends() {
+	  _extends = Object.assign || function (target) {
+	    for (var i = 1; i < arguments.length; i++) {
+	      var source = arguments[i];for (var key in source) {
+	        if (Object.prototype.hasOwnProperty.call(source, key)) {
+	          target[key] = source[key];
+	        }
+	      }
+	    }return target;
+	  };return _extends.apply(this, arguments);
+	}
+	
+	var _ref =
+	/*#__PURE__*/
+	_react2.default.createElement("title", null, "LinkedIn icon");
+	
+	var _ref2 =
+	/*#__PURE__*/
+	_react2.default.createElement("path", {
+	  d: "M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+	});
+	
+	var SvgComponent = function SvgComponent(props) {
+	  return _react2.default.createElement("svg", _extends({
+	    "aria-labelledby": "simpleicons-linkedin-icon",
+	    viewBox: "0 0 24 24"
+	  }, props), _ref, _ref2);
+	};
+	
+	exports.default = "data:image/svg+xml;base64,PHN2ZyBhcmlhLWxhYmVsbGVkYnk9InNpbXBsZWljb25zLWxpbmtlZGluLWljb24iIHJvbGU9ImltZyIgdmlld0JveD0iMCAwIDI0IDI0IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjx0aXRsZSBpZD0ic2ltcGxlaWNvbnMtbGlua2VkaW4taWNvbiI+TGlua2VkSW4gaWNvbjwvdGl0bGU+PHBhdGggZD0iTTIwLjQ0NyAyMC40NTJoLTMuNTU0di01LjU2OWMwLTEuMzI4LS4wMjctMy4wMzctMS44NTItMy4wMzctMS44NTMgMC0yLjEzNiAxLjQ0NS0yLjEzNiAyLjkzOXY1LjY2N0g5LjM1MVY5aDMuNDE0djEuNTYxaC4wNDZjLjQ3Ny0uOSAxLjYzNy0xLjg1IDMuMzctMS44NSAzLjYwMSAwIDQuMjY3IDIuMzcgNC4yNjcgNS40NTV2Ni4yODZ6TTUuMzM3IDcuNDMzYy0xLjE0NCAwLTIuMDYzLS45MjYtMi4wNjMtMi4wNjUgMC0xLjEzOC45Mi0yLjA2MyAyLjA2My0yLjA2MyAxLjE0IDAgMi4wNjQuOTI1IDIuMDY0IDIuMDYzIDAgMS4xMzktLjkyNSAyLjA2NS0yLjA2NCAyLjA2NXptMS43ODIgMTMuMDE5SDMuNTU1VjloMy41NjR2MTEuNDUyek0yMi4yMjUgMEgxLjc3MUMuNzkyIDAgMCAuNzc0IDAgMS43Mjl2MjAuNTQyQzAgMjMuMjI3Ljc5MiAyNCAxLjc3MSAyNGgyMC40NTFDMjMuMiAyNCAyNCAyMy4yMjcgMjQgMjIuMjcxVjEuNzI5QzI0IC43NzQgMjMuMiAwIDIyLjIyMiAwaC4wMDN6Ii8+PC9zdmc+";
+	exports.ReactComponent = SvgComponent;
+
+/***/ }),
+
+/***/ 671:
+/***/ (function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.ReactComponent = undefined;
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _extends() {
+	  _extends = Object.assign || function (target) {
+	    for (var i = 1; i < arguments.length; i++) {
+	      var source = arguments[i];for (var key in source) {
+	        if (Object.prototype.hasOwnProperty.call(source, key)) {
+	          target[key] = source[key];
+	        }
+	      }
+	    }return target;
+	  };return _extends.apply(this, arguments);
+	}
+	
+	var _ref =
+	/*#__PURE__*/
+	_react2.default.createElement("title", null, "Instagram icon");
+	
+	var _ref2 =
+	/*#__PURE__*/
+	_react2.default.createElement("path", {
+	  d: "M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913a5.885 5.885 0 0 0 1.384 2.126A5.868 5.868 0 0 0 4.14 23.37c.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558a5.898 5.898 0 0 0 2.126-1.384 5.86 5.86 0 0 0 1.384-2.126c.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913a5.89 5.89 0 0 0-1.384-2.126A5.847 5.847 0 0 0 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227a3.81 3.81 0 0 1-.899 1.382 3.744 3.744 0 0 1-1.38.896c-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421a3.716 3.716 0 0 1-1.379-.899 3.644 3.644 0 0 1-.9-1.38c-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 1 0 0-12.324zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405a1.441 1.441 0 0 1-2.88 0 1.44 1.44 0 0 1 2.88 0z"
+	});
+	
+	var SvgComponent = function SvgComponent(props) {
+	  return _react2.default.createElement("svg", _extends({
+	    "aria-labelledby": "simpleicons-instagram-icon",
+	    viewBox: "0 0 24 24"
+	  }, props), _ref, _ref2);
+	};
+	
+	exports.default = "data:image/svg+xml;base64,PHN2ZyBhcmlhLWxhYmVsbGVkYnk9InNpbXBsZWljb25zLWluc3RhZ3JhbS1pY29uIiByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGUgaWQ9InNpbXBsZWljb25zLWluc3RhZ3JhbS1pY29uIj5JbnN0YWdyYW0gaWNvbjwvdGl0bGU+PHBhdGggZD0iTTEyIDBDOC43NCAwIDguMzMzLjAxNSA3LjA1My4wNzIgNS43NzUuMTMyIDQuOTA1LjMzMyA0LjE0LjYzYy0uNzg5LjMwNi0xLjQ1OS43MTctMi4xMjYgMS4zODRTLjkzNSAzLjM1LjYzIDQuMTRDLjMzMyA0LjkwNS4xMzEgNS43NzUuMDcyIDcuMDUzLjAxMiA4LjMzMyAwIDguNzQgMCAxMnMuMDE1IDMuNjY3LjA3MiA0Ljk0N2MuMDYgMS4yNzcuMjYxIDIuMTQ4LjU1OCAyLjkxMy4zMDYuNzg4LjcxNyAxLjQ1OSAxLjM4NCAyLjEyNi42NjcuNjY2IDEuMzM2IDEuMDc5IDIuMTI2IDEuMzg0Ljc2Ni4yOTYgMS42MzYuNDk5IDIuOTEzLjU1OEM4LjMzMyAyMy45ODggOC43NCAyNCAxMiAyNHMzLjY2Ny0uMDE1IDQuOTQ3LS4wNzJjMS4yNzctLjA2IDIuMTQ4LS4yNjIgMi45MTMtLjU1OC43ODgtLjMwNiAxLjQ1OS0uNzE4IDIuMTI2LTEuMzg0LjY2Ni0uNjY3IDEuMDc5LTEuMzM1IDEuMzg0LTIuMTI2LjI5Ni0uNzY1LjQ5OS0xLjYzNi41NTgtMi45MTMuMDYtMS4yOC4wNzItMS42ODcuMDcyLTQuOTQ3cy0uMDE1LTMuNjY3LS4wNzItNC45NDdjLS4wNi0xLjI3Ny0uMjYyLTIuMTQ5LS41NTgtMi45MTMtLjMwNi0uNzg5LS43MTgtMS40NTktMS4zODQtMi4xMjZDMjEuMzE5IDEuMzQ3IDIwLjY1MS45MzUgMTkuODYuNjNjLS43NjUtLjI5Ny0xLjYzNi0uNDk5LTIuOTEzLS41NThDMTUuNjY3LjAxMiAxNS4yNiAwIDEyIDB6bTAgMi4xNmMzLjIwMyAwIDMuNTg1LjAxNiA0Ljg1LjA3MSAxLjE3LjA1NSAxLjgwNS4yNDkgMi4yMjcuNDE1LjU2Mi4yMTcuOTYuNDc3IDEuMzgyLjg5Ni40MTkuNDIuNjc5LjgxOS44OTYgMS4zODEuMTY0LjQyMi4zNiAxLjA1Ny40MTMgMi4yMjcuMDU3IDEuMjY2LjA3IDEuNjQ2LjA3IDQuODVzLS4wMTUgMy41ODUtLjA3NCA0Ljg1Yy0uMDYxIDEuMTctLjI1NiAxLjgwNS0uNDIxIDIuMjI3LS4yMjQuNTYyLS40NzkuOTYtLjg5OSAxLjM4Mi0uNDE5LjQxOS0uODI0LjY3OS0xLjM4Ljg5Ni0uNDIuMTY0LTEuMDY1LjM2LTIuMjM1LjQxMy0xLjI3NC4wNTctMS42NDkuMDctNC44NTkuMDctMy4yMTEgMC0zLjU4Ni0uMDE1LTQuODU5LS4wNzQtMS4xNzEtLjA2MS0xLjgxNi0uMjU2LTIuMjM2LS40MjEtLjU2OS0uMjI0LS45Ni0uNDc5LTEuMzc5LS44OTktLjQyMS0uNDE5LS42OS0uODI0LS45LTEuMzgtLjE2NS0uNDItLjM1OS0xLjA2NS0uNDItMi4yMzUtLjA0NS0xLjI2LS4wNjEtMS42NDktLjA2MS00Ljg0NCAwLTMuMTk2LjAxNi0zLjU4Ni4wNjEtNC44NjEuMDYxLTEuMTcuMjU1LTEuODE0LjQyLTIuMjM0LjIxLS41Ny40NzktLjk2LjktMS4zODEuNDE5LS40MTkuODEtLjY4OSAxLjM3OS0uODk4LjQyLS4xNjYgMS4wNTEtLjM2MSAyLjIyMS0uNDIxIDEuMjc1LS4wNDUgMS42NS0uMDYgNC44NTktLjA2bC4wNDUuMDN6bTAgMy42NzhjLTMuNDA1IDAtNi4xNjIgMi43Ni02LjE2MiA2LjE2MiAwIDMuNDA1IDIuNzYgNi4xNjIgNi4xNjIgNi4xNjIgMy40MDUgMCA2LjE2Mi0yLjc2IDYuMTYyLTYuMTYyIDAtMy40MDUtMi43Ni02LjE2Mi02LjE2Mi02LjE2MnpNMTIgMTZjLTIuMjEgMC00LTEuNzktNC00czEuNzktNCA0LTQgNCAxLjc5IDQgNC0xLjc5IDQtNCA0em03Ljg0Ni0xMC40MDVjMCAuNzk1LS42NDYgMS40NC0xLjQ0IDEuNDQtLjc5NSAwLTEuNDQtLjY0Ni0xLjQ0LTEuNDQgMC0uNzk0LjY0Ni0xLjQzOSAxLjQ0LTEuNDM5Ljc5My0uMDAxIDEuNDQuNjQ1IDEuNDQgMS40Mzl6Ii8+PC9zdmc+";
+	exports.ReactComponent = SvgComponent;
+
+/***/ }),
+
+/***/ 672:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -529,7 +650,7 @@ exports.modules = {
 
 /***/ }),
 
-/***/ 671:
+/***/ 673:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -556,7 +677,7 @@ exports.modules = {
 	
 	var _IconButton2 = _interopRequireDefault(_IconButton);
 	
-	var _ExpandMore = __webpack_require__(672);
+	var _ExpandMore = __webpack_require__(674);
 	
 	var _ExpandMore2 = _interopRequireDefault(_ExpandMore);
 	
@@ -716,7 +837,7 @@ exports.modules = {
 
 /***/ }),
 
-/***/ 672:
+/***/ 674:
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -758,7 +879,7 @@ exports.modules = {
 
 /***/ }),
 
-/***/ 673:
+/***/ 675:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -817,7 +938,7 @@ exports.modules = {
 
 /***/ }),
 
-/***/ 674:
+/***/ 676:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -836,25 +957,25 @@ exports.modules = {
 	
 	var _reactJss2 = _interopRequireDefault(_reactJss);
 	
-	var _algolia = __webpack_require__(675);
+	var _algolia = __webpack_require__(677);
 	
-	var _react3 = __webpack_require__(676);
+	var _react3 = __webpack_require__(678);
 	
-	var _graphql = __webpack_require__(677);
+	var _graphql = __webpack_require__(679);
 	
-	var _jss = __webpack_require__(678);
+	var _jss = __webpack_require__(680);
 	
-	var _materialUi = __webpack_require__(679);
+	var _materialUi = __webpack_require__(681);
 	
-	var _redux = __webpack_require__(680);
+	var _redux = __webpack_require__(682);
 	
-	var _gatsby = __webpack_require__(681);
+	var _gatsby = __webpack_require__(683);
 	
-	var _webpack = __webpack_require__(682);
+	var _webpack = __webpack_require__(684);
 	
-	var _babel = __webpack_require__(683);
+	var _babel = __webpack_require__(685);
 	
-	var _netlify = __webpack_require__(684);
+	var _netlify = __webpack_require__(686);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -941,7 +1062,7 @@ exports.modules = {
 
 /***/ }),
 
-/***/ 675:
+/***/ 677:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -995,7 +1116,7 @@ exports.modules = {
 
 /***/ }),
 
-/***/ 676:
+/***/ 678:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -1062,7 +1183,7 @@ exports.modules = {
 
 /***/ }),
 
-/***/ 677:
+/***/ 679:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -1150,7 +1271,7 @@ exports.modules = {
 
 /***/ }),
 
-/***/ 678:
+/***/ 680:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -1210,7 +1331,7 @@ exports.modules = {
 
 /***/ }),
 
-/***/ 679:
+/***/ 681:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -1334,7 +1455,7 @@ exports.modules = {
 
 /***/ }),
 
-/***/ 680:
+/***/ 682:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -1385,7 +1506,7 @@ exports.modules = {
 
 /***/ }),
 
-/***/ 681:
+/***/ 683:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -1431,7 +1552,7 @@ exports.modules = {
 
 /***/ }),
 
-/***/ 682:
+/***/ 684:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -1492,7 +1613,7 @@ exports.modules = {
 
 /***/ }),
 
-/***/ 683:
+/***/ 685:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -1545,7 +1666,7 @@ exports.modules = {
 
 /***/ }),
 
-/***/ 684:
+/***/ 686:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
