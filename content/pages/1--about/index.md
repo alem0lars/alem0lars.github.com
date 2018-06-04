@@ -2,36 +2,10 @@
 title: About
 ---
 
-This is a demo site of the [PersonalBlog](https://github.com/alem0lars/alem0lars.github.com) GatsbyJS starter.
+<!-- TODO -->
 
-The starter is a ready to use, easy to customize 'like theme' starter. It has everything what blog should have and some more.
+I am a Cyber-Security Consultant & Ethical Hacker, specialized in Red Teaming, Penetration Testing, Advanced Persistent Threat (APT)
 
-### Standard features:
+My other activities include Teaching & Coordinating in both private and academic Cyber-Security courses.
 
-* Easy editable content in **Markdown** files (posts, pages and parts)
-* **SEO** (sitemap generation, robot.txt, meta and OpenGraph Tags)
-* **Social** sharing (Twitter, Facebook, Google, LinkedIn)
-* **Comments** (Facebook)
-* **Images** lazy loading and `webp` support (gatsby-image)
-* Post **categories** (post list filtering)
-* Full text **searching** (Algolia)
-* **Contact** form (Netlify form handling)
-* **RSS** feed
-* **PWA** (manifes.json, offline support, favicons)
-* Google **Analytics**
-* **Favicons** generator (node script)
-* **Material UI** (@next)
-
-### Advanced features:
-
-* Easy customizable base **styles** via `theme` object (fonts, colors, sizes)
-* **Components** lazy loading (social sharing, comments)
-* **ESLint** (google config)
-* **Prettier** code styling
-* Custom webpack `CommonsChunkPlugin` settings
-* Webpack `BundleAnalyzerPlugin`
-* Contact **form validation** (react-material-ui-form-validator)
-
-## Instructions
-
-For detailed instructions go to [Front-end web development with Greg](https://dev.alem0lars.com/alem0lars.github.com/).
+Last but not least, I do some Vulnerability Research & Malware Analysis in my spare time, and I'm the current leader of CeSeNA Security.

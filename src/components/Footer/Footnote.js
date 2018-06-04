@@ -24,6 +24,9 @@ const styles = theme => ({
     "& li": {
       display: "inline-block",
       margin: "0 .3em"
+    },
+    "& img": {
+      height: "1em"
     }
   }
 });
