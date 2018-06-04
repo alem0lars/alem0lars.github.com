@@ -9,7 +9,6 @@ Source code of alem0lars website & blog. <br /> <br />
 [![PRs Welcome][prs-badge]][prs]
 [![Code of Conduct][coc-badge]][coc]
 [![code style prettier][prettier-badge]][prettier]
-[![Tweet][twitter-badge]][twitter]
 
   <br />
 
@@ -66,7 +65,7 @@ to create static site ready to host (`/public`).
 
 ## Authors
 
-* Alessandro Molari [@alem0lars](https://github.com/alem0lars)
+* Alessandro Molari [@alem0lars][github-alem0lars]
 
 ## Contributing
 
@@ -89,12 +88,16 @@ The above copyright notice and this permission notice shall be included in all c
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
+<!-- ----------------------------------------------------------------------- -->
+
+<!-- Personal -->
+[github-alem0lars]: https://github.com/alem0lars
+
+<!-- Badges -->
 [coc-badge]: https://img.shields.io/badge/code%20of-conduct-ff69b4.svg?style=flat-square
 [coc]: https://github.com/alem0lars/alem0lars.github.com/blob/master/CODE_OF_CONDUCT.md
 [prs-badge]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square
 [prs]: http://makeapullrequest.com
-[twitter]: https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2Falem0lars%2Falem0lars.github.com
-[twitter-badge]: https://img.shields.io/twitter/url/https/github.com/alem0lars/alem0lars.github.com.svg?style=social
 [tag-badge]: https://img.shields.io/github/tag/alem0lars/alem0lars.github.com.svg
 [tag]: https://github.com/alem0lars/alem0lars.github.com
 [stars-badge]: https://img.shields.io/github/stars/alem0lars/alem0lars.github.com.svg
@@ -105,5 +108,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 [mit-badge]: https://img.shields.io/github/license/alem0lars/alem0lars.github.com.svg
 [mit]: https://github.com/alem0lars/alem0lars.github.com/blob/master/LICENSE
 
+<!-- Others -->
 [gatsby]: https://www.gatsbyjs.org
 [gatsby-starter-personal-blog]: https://github.com/greglobinski/gatsby-starter-personal-blog
