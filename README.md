@@ -26,13 +26,25 @@ the starter [gatsby-starter-personal-blog][gatsby-starter-personal-blog]
 
 ### Setup
 
-After cloning the repository, run:
+Clone the repository:
+
+```shell-session
+$ git clone --recurse-submodules git@github.com:alem0lars/alem0lars.github.com website
+```
+
+Or if you've already cloned the repository, you must update submodules:
+
+```shell-session
+$ git submodule init
+$ git submodule update
+```
+
+After cloning the repository and updated its submodules, you'll need to install
+the dependencies:
 
 ```shell-session
 $ npm i
 ```
-
-#### External services
 
 The website uses external services for comments, searching, analytics.
 To use them you have to secure some access data.
