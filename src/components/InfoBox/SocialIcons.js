@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import injectSheet from "react-jss";
+import Tooltip from "material-ui/Tooltip";
 
 import config from "../../../content/meta/config";
 
@@ -49,16 +50,17 @@ const Socialcons = props => {
       {items.map(item => {
         const Icon = icons[item.name];
         return (
-          <a
-            href={item.url}
-            key={item.name}
-            className={classes.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            title={item.name}
-          >
-            <Icon className={classes.svg} />
-          </a>
+          <Tooltip title={item.title} key={item.name}>
+            <a
+              href={item.url}
+              className={classes.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              title={item.name}
+            >
+              <Icon className={classes.svg} />
+            </a>
+          </Tooltip>
         );
       })}
     </div>

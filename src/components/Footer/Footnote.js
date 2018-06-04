@@ -25,6 +25,7 @@ const styles = theme => ({
       display: "inline-block",
       margin: "0 .3em"
     },
+    // Display images inside footer inline
     "& img": {
       height: "1em"
     }
@@ -32,7 +33,12 @@ const styles = theme => ({
 });
 
 const Footnote = ({ classes, content }) => {
-  return <div className={classes.container} dangerouslySetInnerHTML={{ __html: content }} />;
+  return (
+    <div
+      className={classes.container}
+      dangerouslySetInnerHTML={{ __html: content }}
+    />
+  );
 };
 
 Footnote.propTypes = {

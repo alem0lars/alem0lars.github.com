@@ -1,6 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 import injectSheet from "react-jss";
+import Tooltip from "material-ui/Tooltip";
+
+import config from "../../../content/meta/config";
 
 import { ReactComponent as GentooIcon } from "../../images/svg-icons/gentoo.svg";
 import { ReactComponent as XMonadIcon } from "../../images/svg-icons/xmonad.svg";
@@ -44,29 +47,31 @@ const styles = theme => ({
 const StackIcons = props => {
   const { classes } = props;
 
-  const items = [
-    { name: "gentoo", url: "https://gentoo.org", comp: GentooIcon },
-    { name: "xmonad", url: "https://xmonad.org", comp: XMonadIcon },
-    { name: "vim", url: "https://vim.org", comp: VimIcon }
-  ];
+  const items = config.builtWith;
+  const icons = {
+    gentoo: GentooIcon,
+    xmonad: XMonadIcon,
+    vim: VimIcon
+  };
 
   return (
     <div className={classes.stack}>
       <h5 className={classes.header}>built with:</h5>
       <div className={classes.box}>
         {items.map(item => {
-          const Icon = item.comp;
+          const Icon = icons[item.name];
           return (
-            <a
-              href={item.url}
-              key={item.name}
-              className={classes.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              title={item.name}
-            >
-              <Icon className={classes.svg} />
-            </a>
+            <Tooltip title={item.title} key={item.name}>
+              <a
+                href={item.url}
+                className={classes.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                title={item.name}
+              >
+                <Icon className={classes.svg} />
+              </a>
+            </Tooltip>
           );
         })}
       </div>

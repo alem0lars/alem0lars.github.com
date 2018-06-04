@@ -26,10 +26,27 @@ module.exports = {
   contactEmail: "molari.alessandro@gmail.com",
   // social
   authorSocialLinks: [
-    { name: "github", url: "https://github.com/alem0lars" },
-    { name: "linkedin", url: "https://linkedin.com/alem0lars" },
-    { name: "twitter", url: "https://twitter.com/alem0lars" },
-    { name: "facebook", url: "https://facebook.com/alem0lars" },
-    { name: "instagram", url: "https://instagram.com/alem0lars" }
+    { name: "github", title: "Github", url: "https://github.com/alem0lars" },
+    {
+      name: "linkedin",
+      title: "LinkedIN",
+      url: "https://linkedin.com/alem0lars"
+    },
+    { name: "twitter", title: "Twitter", url: "https://twitter.com/alem0lars" },
+    {
+      name: "facebook",
+      title: "Facebook",
+      url: "https://facebook.com/alem0lars"
+    },
+    {
+      name: "instagram",
+      title: "Instagram",
+      url: "https://instagram.com/alem0lars"
+    }
+  ],
+  builtWith: [
+    { name: "gentoo", title: "Gentoo Linux", url: "https://gentoo.org" },
+    { name: "xmonad", title: "XMonad WM", url: "https://xmonad.org" },
+    { name: "vim", title: "Vim", url: "https://vim.org" }
   ]
 };

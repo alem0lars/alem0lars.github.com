@@ -4,6 +4,7 @@
 set -e
 
 # Ensure latest version of website is built
+npm run generate-app-icons
 npm run build
 
 # Perform deploy
