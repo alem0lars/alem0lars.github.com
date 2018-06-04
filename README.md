@@ -36,7 +36,7 @@ Or if you've already cloned the repository, you must update submodules:
 
 ```shell-session
 $ git submodule init
-$ git submodule update --remote
+$ git submodule update
 ```
 
 After cloning the repository and updated its submodules, you'll need to install
