@@ -14,7 +14,8 @@
     "format": "./node_modules/.bin/prettier --write src/**/*.{js,jsx}",
     "lint-errors": "./node_modules/.bin/eslint src/**/*.{js,jsx} --quiet",
     "lint": "./node_modules/.bin/eslint src/**/*.{js,jsx}",
-    "generate-app-icons": "/bin/sh ./scripts/generate-app-icons.sh"
+    "generate-app-icons": "/bin/sh ./scripts/generate-app-icons.sh",
+    "deploy": "/bin/sh ./scripts/deploy.sh"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.3",

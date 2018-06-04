@@ -37,6 +37,7 @@ Or if you've already cloned the repository, you must update submodules:
 ```shell-session
 $ git submodule init
 $ git submodule update
+$ cd public; git checkout master; cd ..
 ```
 
 After cloning the repository and updated its submodules, you'll need to install
@@ -70,10 +71,16 @@ $ npm run develop
 to hot-serve the website on [http://localhost:8000][develop-url] or:
 
 ```text
-gatsby build
+$ npm run build
 ```
 
 to create static site ready to host (`/public`).
+
+### Deployment
+
+```shell-session
+$ npm run deploy
+```
 
 ## Authors
 
