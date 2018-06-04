@@ -24,7 +24,8 @@ const query = `{
 const queries = [
   {
     query,
-    transformer: ({ data }) => data.allMarkdownRemark.edges.map(({ node }) => node)
+    transformer: ({ data }) =>
+      data.allMarkdownRemark.edges.map(({ node }) => node)
   }
 ];
 
@@ -39,7 +40,9 @@ module.exports = {
       searchOnlyApiKey: process.env.ALGOLIA_SEARCH_ONLY_API_KEY
         ? process.env.ALGOLIA_SEARCH_ONLY_API_KEY
         : "",
-      indexName: process.env.ALGOLIA_INDEX_NAME ? process.env.ALGOLIA_INDEX_NAME : ""
+      indexName: process.env.ALGOLIA_INDEX_NAME
+        ? process.env.ALGOLIA_INDEX_NAME
+        : ""
     },
     facebook: {
       appId: process.env.FB_APP_ID ? process.env.FB_APP_ID : ""
@@ -50,8 +53,12 @@ module.exports = {
       resolve: `gatsby-plugin-algolia`,
       options: {
         appId: process.env.ALGOLIA_APP_ID ? process.env.ALGOLIA_APP_ID : "",
-        apiKey: process.env.ALGOLIA_ADMIN_API_KEY ? process.env.ALGOLIA_ADMIN_API_KEY : "",
-        indexName: process.env.ALGOLIA_INDEX_NAME ? process.env.ALGOLIA_INDEX_NAME : "",
+        apiKey: process.env.ALGOLIA_ADMIN_API_KEY
+          ? process.env.ALGOLIA_ADMIN_API_KEY
+          : "",
+        indexName: process.env.ALGOLIA_INDEX_NAME
+          ? process.env.ALGOLIA_INDEX_NAME
+          : "",
         queries,
         chunkSize: 10000 // default: 1000
       }
@@ -198,9 +205,9 @@ module.exports = {
                     node {
                       excerpt
                       html
-                      fields { 
+                      fields {
                         slug
-                        prefix 
+                        prefix
                       }
                       frontmatter {
                         title
