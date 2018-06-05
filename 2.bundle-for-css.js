@@ -21,7 +21,7 @@ webpackJsonp([2],{
 
 	var _reactShare = __webpack_require__(808);
 
-	var _config = __webpack_require__(708);
+	var _config = __webpack_require__(710);
 
 	var _config2 = _interopRequireDefault(_config);
 

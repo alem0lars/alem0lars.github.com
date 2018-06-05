@@ -5,32 +5,36 @@
       "component---src-pages-index-js-aa9570313651ef926b5a.js.map"
     ],
     "path---": [
-      "path----f7850858c4e85db12dea.js",
-      "path----f7850858c4e85db12dea.js.map"
+      "path----8d426a93f6cbb9d1f690.js",
+      "path----8d426a93f6cbb9d1f690.js.map"
     ],
     "component---src-pages-contact-js": [
       "component---src-pages-contact-js-ea86b1ef0831c4c8d56e.js",
       "component---src-pages-contact-js-ea86b1ef0831c4c8d56e.js.map"
+    ],
+    "path---projects": [
+      "path---projects-5858e18388b7737b1f3c.js",
+      "path---projects-5858e18388b7737b1f3c.js.map"
     ],
     "component---node-modules-gatsby-plugin-offline-app-shell-js": [
       "component---node-modules-gatsby-plugin-offline-app-shell-js-5c4c5a0f7af9dc69d6d7.js",
       "component---node-modules-gatsby-plugin-offline-app-shell-js-5c4c5a0f7af9dc69d6d7.js.map"
     ],
     "path---two-things-are-infinite": [
-      "path---two-things-are-infinite-6e208ec01a52c89ba923.js",
-      "path---two-things-are-infinite-6e208ec01a52c89ba923.js.map"
+      "path---two-things-are-infinite-6af11abee0568a2e39f2.js",
+      "path---two-things-are-infinite-6af11abee0568a2e39f2.js.map"
     ],
     "component---src-layouts-index-js": [
-      "component---src-layouts-index-js-9efcc6a90a6a2f1e73e1.js",
-      "component---src-layouts-index-js-9efcc6a90a6a2f1e73e1.js.map"
+      "component---src-layouts-index-js-a4f07b219be0b65ee70e.js",
+      "component---src-layouts-index-js-a4f07b219be0b65ee70e.js.map"
     ],
     "path---index": [
       "path---index-206ac74de0d3aab26f03.js",
       "path---index-206ac74de0d3aab26f03.js.map"
     ],
     "path---consultancy": [
-      "path---consultancy-462d6183483ae0accafe.js",
-      "path---consultancy-462d6183483ae0accafe.js.map"
+      "path---consultancy-c96a5814ca050d45a8e5.js",
+      "path---consultancy-c96a5814ca050d45a8e5.js.map"
     ],
     "component---src-pages-search-js": [
       "component---src-pages-search-js-62a198e9d5a6cef6a753.js",
@@ -59,9 +63,9 @@
       "path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js.map"
     ],
     "app": [
-      "app-221d97c970f540b0cbb5.js",
+      "app-431da7f6833a41f6019a.js",
       "build-js-styles.css",
-      "app-221d97c970f540b0cbb5.js.map",
+      "app-431da7f6833a41f6019a.js.map",
       "build-js-styles.css.map"
     ],
     "component---src-templates-page-template-js": [
@@ -73,8 +77,8 @@
       "path---search-7dc9d00da19fddd56e7b.js.map"
     ],
     "path---about": [
-      "path---about-ba0be24066bde5f44209.js",
-      "path---about-ba0be24066bde5f44209.js.map"
+      "path---about-4a1e975aeed75358ec43.js",
+      "path---about-4a1e975aeed75358ec43.js.map"
     ]
   }
 }

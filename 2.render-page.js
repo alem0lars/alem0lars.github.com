@@ -22,7 +22,7 @@ exports.modules = {
 	
 	var _reactShare = __webpack_require__(789);
 	
-	var _config = __webpack_require__(664);
+	var _config = __webpack_require__(666);
 	
 	var _config2 = _interopRequireDefault(_config);
 	
