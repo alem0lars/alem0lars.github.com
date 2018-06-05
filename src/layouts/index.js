@@ -4,8 +4,7 @@ import { MuiThemeProvider } from "material-ui/styles";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 
-import { themes, getTheme } from "../styles/themes";
-import globals from "../styles/globals";
+import { getTheme } from "../styles/themes";
 
 import { setFontSizeIncrease, setIsWideScreen } from "../state/store";
 
@@ -14,25 +13,28 @@ import Loading from "../components/common/Loading/";
 import Navigator from "../components/Navigator/";
 import ActionsBar from "../components/ActionsBar/";
 import InfoBar from "../components/InfoBar/";
+import GlobalStyles from "../components/GlobalStyles/";
 
 import { isWideScreen, timeoutThrottlerHandler } from "../utils/helpers";
 
 const InfoBox = asyncComponent(
   () =>
     import("../components/InfoBox/")
-      .then(module => {
-        return module;
-      })
+      .then(module => module)
       .catch(error => {}),
-  // FIXME support theme changes
-  <Loading
-    overrides={{
-      width: `${themes[0].data.info.sizes.width}px`,
-      height: "100vh",
-      right: "auto"
-    }}
-    afterRight={true}
-  />
+  props => {
+    const theme = getTheme(props.themeName);
+    return (
+      <Loading
+        overrides={{
+          width: `${theme.info.sizes.width}px`,
+          height: "100vh",
+          right: "auto"
+        }}
+        afterRight={true}
+      />
+    );
+  }
 );
 
 class Layout extends React.Component {
@@ -104,6 +106,7 @@ class Layout extends React.Component {
           }}
         >
           {children()}
+          <GlobalStyles />
           <Navigator posts={data.posts.edges} />
           <ActionsBar categories={this.categories} />
           <InfoBar pages={data.pages.edges} parts={data.parts.edges} />
@@ -164,7 +167,7 @@ const mapDispatchToProps = {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(injectSheet(globals)(Layout));
+)(injectSheet({})(Layout));
 
 //eslint-disable-next-line no-undef
 export const guery = graphql`

@@ -1,6 +1,4 @@
-import theme from "./light-theme"; // FIXME
-
-export default {
+const styles = theme => ({
   /* NORMALIZE STYLE */
 
   "@global": {
@@ -365,4 +363,6 @@ export default {
       "-webkit-box-shadow": "0 0 0 50px white inset"
     }
   }
-};
+});
+
+export default styles;

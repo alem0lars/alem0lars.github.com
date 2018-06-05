@@ -227,7 +227,8 @@ ActionsBar.propTypes = {
   categories: PropTypes.array.isRequired,
   setCategoryFilter: PropTypes.func.isRequired,
   categoryFilter: PropTypes.string.isRequired,
-  themeName: PropTypes.string.isRequired
+  themeName: PropTypes.string.isRequired,
+  setTheme: PropTypes.func.isRequired
 };
 
 const mapStateToProps = (state, ownProps) => {
