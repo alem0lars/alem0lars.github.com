@@ -4,17 +4,18 @@
 set -e
 
 # Ensure latest version of website is built
+rm -R ./public/*
 npm run generate-app-icons
 npm run build
 
 # Perform deploy
-cd public/
+cd ./public/
 git add .
 git commit -m 'Website built'
 git push
 cd ..
 
 # Update source branch
-git add public/
+git add ./public/
 git commit -m 'Website built'
 git push
