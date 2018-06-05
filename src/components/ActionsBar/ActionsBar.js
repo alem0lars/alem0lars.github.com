@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import injectSheet from "react-jss";
 import IconButton from "material-ui/IconButton";
+import Tooltip from "material-ui/Tooltip";
 
 import Link from "gatsby-link";
 import { connect } from "react-redux";
@@ -141,68 +142,75 @@ class ActionsBar extends React.Component {
     return (
       <div className={classes.actionsBar}>
         <div className={classes.group}>
-          <IconButton
-            aria-label="Back to list"
-            onClick={this.homeOnClick}
-            title="Back to the list"
-            className={classes.button}
-          >
-            <HomeIcon />
-          </IconButton>
+          <Tooltip title="Back to list" placement="left">
+            <IconButton
+              aria-label="Back to list"
+              onClick={this.homeOnClick}
+              className={classes.button}
+            >
+              <HomeIcon />
+            </IconButton>
+          </Tooltip>
+
           {((isWideScreen && navigatorShape === "open") ||
             navigatorPosition !== "is-aside") && (
-            <CategoryFilter
-              categories={categories}
-              filterCategory={this.categoryFilterOnClick}
-            />
+            <Tooltip title="Filter Categories" placement="left">
+              <CategoryFilter
+                categories={categories}
+                filterCategory={this.categoryFilterOnClick}
+              />
+            </Tooltip>
           )}
-          <IconButton
-            aria-label="Search"
-            onClick={this.searchOnClick}
-            component={Link}
-            data-shape="closed"
-            to="/search/"
-            title="Search"
-            className={classes.button}
-          >
-            <SearchIcon className={classes.button} />
-          </IconButton>
+
+          <Tooltip title="Search" placement="left">
+            <IconButton
+              aria-label="Search"
+              onClick={this.searchOnClick}
+              component={Link}
+              data-shape="closed"
+              to="/search/"
+              className={classes.button}
+            >
+              <SearchIcon className={classes.button} />
+            </IconButton>
+          </Tooltip>
         </div>
+
         <div className={classes.group}>
           {navigatorPosition === "is-aside" && (
             <FontSetter increaseFont={this.fontSetterOnClick} />
           )}
 
-          <IconButton
-            aria-label="Change Theme"
-            onClick={this.changeThemeOnClick}
-            title="Change Theme"
-          >
-            <BrightnessLowIcon className={classes.button} />
-          </IconButton>
+          <Tooltip title="Change Theme" placement="left">
+            <IconButton
+              aria-label="Change Theme"
+              onClick={this.changeThemeOnClick}
+            >
+              <BrightnessLowIcon className={classes.button} />
+            </IconButton>
+          </Tooltip>
 
           {screenfull.enabled && (
-            <IconButton
-              aria-label="Fullscreen"
-              onClick={this.fullscreenOnClick}
-              title="Fullscreen mode"
-              className={classes.button}
-            >
-              {this.state.fullscreen ? (
-                <FullscreenExitIcon />
-              ) : (
-                <FullscreenIcon />
-              )}
-            </IconButton>
+            <Tooltip title="Fullscreen Mode" placement="left">
+              <IconButton
+                aria-label="Fullscreen"
+                onClick={this.fullscreenOnClick}
+                className={classes.button}
+              >
+                {this.state.fullscreen ? (
+                  <FullscreenExitIcon />
+                ) : (
+                  <FullscreenIcon />
+                )}
+              </IconButton>
+            </Tooltip>
           )}
 
-          <IconButton
-            aria-label="Back to top"
-            onClick={this.arrowUpOnClick}
-            title="Scroll to top"
-          >
-            <ArrowUpwardIcon className={classes.button} />
-          </IconButton>
+          <Tooltip title="Scroll to Top" placement="left">
+            <IconButton aria-label="Back to Top" onClick={this.arrowUpOnClick}>
+              <ArrowUpwardIcon className={classes.button} />
+            </IconButton>
+          </Tooltip>
         </div>
       </div>
     );

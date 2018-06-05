@@ -4,6 +4,6 @@ menuTitle: Consultancy
 ---
 
 <!-- TODO -->
-Contact me via email: molari.alessandro@gmail.com
+Work in progress.. Stay tuned!
 
-*Work in progress..*
+Contact me via email: molari.alessandro@gmail.com

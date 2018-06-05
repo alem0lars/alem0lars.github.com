@@ -1,13 +1,16 @@
 import React from "react";
 import PropTypes from "prop-types";
 import injectSheet from "react-jss";
+import { Manager, Target, Popper } from "react-popper";
+import classNames from "classnames";
+
 import { MenuItem, MenuList } from "material-ui/Menu";
 import IconButton from "material-ui/IconButton";
-import { Manager, Target, Popper } from "react-popper";
+import Paper from "material-ui/Paper";
+import Tooltip from "material-ui/Tooltip";
 import ClickAwayListener from "material-ui/utils/ClickAwayListener";
 import Grow from "material-ui/transitions/Grow";
-import Paper from "material-ui/Paper";
-import classNames from "classnames";
+
 import FormatSizeIcon from "material-ui-icons/FormatSize";
 
 const styles = theme => ({
@@ -61,16 +64,17 @@ class FontSetter extends React.Component {
       <nav className={classes.fontSizeSetter}>
         <Manager>
           <Target>
-            <IconButton
-              aria-label="Increase font size"
-              aria-owns={anchorEl ? "long-menu" : null}
-              aria-haspopup="true"
-              onClick={this.handleClick}
-              title="Change font size"
-              className={classes.open}
-            >
-              <FormatSizeIcon />
-            </IconButton>
+            <Tooltip title="Change Font Size" placement="left">
+              <IconButton
+                aria-label="Change Font Size"
+                aria-owns={anchorEl ? "long-menu" : null}
+                aria-haspopup="true"
+                onClick={this.handleClick}
+                className={classes.open}
+              >
+                <FormatSizeIcon />
+              </IconButton>
+            </Tooltip>
           </Target>
           <Popper
             placement="bottom-end"
@@ -78,7 +82,11 @@ class FontSetter extends React.Component {
             className={classNames({ [classes.popperClose]: !open })}
           >
             <ClickAwayListener onClickAway={this.handleClose}>
-              <Grow in={open} id="font-menu-list" style={{ transformOrigin: "0 0 0" }}>
+              <Grow
+                in={open}
+                id="font-menu-list"
+                style={{ transformOrigin: "0 0 0" }}
+              >
                 <Paper>
                   <MenuList role="menu">
                     <MenuItem onClick={this.handleSetting}>150%</MenuItem>
