@@ -1,13 +1,13 @@
 webpackJsonp([1],{
 
-/***/ 715:
+/***/ 717:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
 
 	exports.__esModule = true;
 
-	var _InfoBox = __webpack_require__(716);
+	var _InfoBox = __webpack_require__(718);
 
 	Object.defineProperty(exports, "default", {
 	  enumerable: true,
@@ -22,7 +22,7 @@ webpackJsonp([1],{
 
 /***/ }),
 
-/***/ 716:
+/***/ 718:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -43,27 +43,27 @@ webpackJsonp([1],{
 
 	var _reactRedux = __webpack_require__(311);
 
-	var _SocialIcons = __webpack_require__(717);
+	var _SocialIcons = __webpack_require__(719);
 
 	var _SocialIcons2 = _interopRequireDefault(_SocialIcons);
 
-	var _InfoMenu = __webpack_require__(723);
+	var _InfoMenu = __webpack_require__(725);
 
 	var _InfoMenu2 = _interopRequireDefault(_InfoMenu);
 
-	var _InfoHeader = __webpack_require__(724);
+	var _InfoHeader = __webpack_require__(726);
 
 	var _InfoHeader2 = _interopRequireDefault(_InfoHeader);
 
-	var _InfoText = __webpack_require__(726);
+	var _InfoText = __webpack_require__(728);
 
 	var _InfoText2 = _interopRequireDefault(_InfoText);
 
-	var _StackIcons = __webpack_require__(727);
+	var _StackIcons = __webpack_require__(729);
 
 	var _StackIcons2 = _interopRequireDefault(_StackIcons);
 
-	var _shared = __webpack_require__(568);
+	var _shared = __webpack_require__(567);
 
 	var _store = __webpack_require__(341);
 
@@ -75,7 +75,7 @@ webpackJsonp([1],{
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	__webpack_require__(731);
+	__webpack_require__(733);
 
 	var styles = function styles(theme) {
 	  var _infoBox;
@@ -205,7 +205,7 @@ webpackJsonp([1],{
 
 /***/ }),
 
-/***/ 717:
+/***/ 719:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -224,23 +224,23 @@ webpackJsonp([1],{
 
 	var _reactJss2 = _interopRequireDefault(_reactJss);
 
-	var _Tooltip = __webpack_require__(630);
+	var _Tooltip = __webpack_require__(629);
 
 	var _Tooltip2 = _interopRequireDefault(_Tooltip);
 
-	var _config = __webpack_require__(710);
+	var _config = __webpack_require__(709);
 
 	var _config2 = _interopRequireDefault(_config);
 
-	var _github = __webpack_require__(718);
+	var _github = __webpack_require__(720);
 
-	var _facebook = __webpack_require__(719);
+	var _facebook = __webpack_require__(721);
 
-	var _twitter = __webpack_require__(720);
+	var _twitter = __webpack_require__(722);
 
-	var _linkedin = __webpack_require__(721);
+	var _linkedin = __webpack_require__(723);
 
-	var _instagram = __webpack_require__(722);
+	var _instagram = __webpack_require__(724);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -314,7 +314,7 @@ webpackJsonp([1],{
 
 /***/ }),
 
-/***/ 718:
+/***/ 720:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -364,7 +364,7 @@ webpackJsonp([1],{
 
 /***/ }),
 
-/***/ 719:
+/***/ 721:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -414,7 +414,7 @@ webpackJsonp([1],{
 
 /***/ }),
 
-/***/ 720:
+/***/ 722:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -464,7 +464,7 @@ webpackJsonp([1],{
 
 /***/ }),
 
-/***/ 721:
+/***/ 723:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -514,7 +514,7 @@ webpackJsonp([1],{
 
 /***/ }),
 
-/***/ 722:
+/***/ 724:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -564,7 +564,7 @@ webpackJsonp([1],{
 
 /***/ }),
 
-/***/ 723:
+/***/ 725:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -656,7 +656,7 @@ webpackJsonp([1],{
 
 /***/ }),
 
-/***/ 724:
+/***/ 726:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -679,19 +679,19 @@ webpackJsonp([1],{
 
 	var _gatsbyLink2 = _interopRequireDefault(_gatsbyLink);
 
-	var _IconButton = __webpack_require__(571);
+	var _IconButton = __webpack_require__(570);
 
 	var _IconButton2 = _interopRequireDefault(_IconButton);
 
-	var _ExpandMore = __webpack_require__(725);
+	var _ExpandMore = __webpack_require__(727);
 
 	var _ExpandMore2 = _interopRequireDefault(_ExpandMore);
 
-	var _avatar2 = __webpack_require__(711);
+	var _avatar2 = __webpack_require__(710);
 
 	var _avatar3 = _interopRequireDefault(_avatar2);
 
-	var _config = __webpack_require__(710);
+	var _config = __webpack_require__(709);
 
 	var _config2 = _interopRequireDefault(_config);
 
@@ -843,7 +843,7 @@ webpackJsonp([1],{
 
 /***/ }),
 
-/***/ 725:
+/***/ 727:
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {'use strict';
@@ -856,11 +856,11 @@ webpackJsonp([1],{
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _pure = __webpack_require__(597);
+	var _pure = __webpack_require__(596);
 
 	var _pure2 = _interopRequireDefault(_pure);
 
-	var _SvgIcon = __webpack_require__(602);
+	var _SvgIcon = __webpack_require__(601);
 
 	var _SvgIcon2 = _interopRequireDefault(_SvgIcon);
 
@@ -886,7 +886,7 @@ webpackJsonp([1],{
 
 /***/ }),
 
-/***/ 726:
+/***/ 728:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -945,7 +945,7 @@ webpackJsonp([1],{
 
 /***/ }),
 
-/***/ 727:
+/***/ 729:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -964,19 +964,19 @@ webpackJsonp([1],{
 
 	var _reactJss2 = _interopRequireDefault(_reactJss);
 
-	var _Tooltip = __webpack_require__(630);
+	var _Tooltip = __webpack_require__(629);
 
 	var _Tooltip2 = _interopRequireDefault(_Tooltip);
 
-	var _config = __webpack_require__(710);
+	var _config = __webpack_require__(709);
 
 	var _config2 = _interopRequireDefault(_config);
 
-	var _gentoo = __webpack_require__(728);
+	var _gentoo = __webpack_require__(730);
 
-	var _xmonad = __webpack_require__(729);
+	var _xmonad = __webpack_require__(731);
 
-	var _vim = __webpack_require__(730);
+	var _vim = __webpack_require__(732);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -1071,7 +1071,7 @@ webpackJsonp([1],{
 
 /***/ }),
 
-/***/ 728:
+/***/ 730:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -1137,7 +1137,7 @@ webpackJsonp([1],{
 
 /***/ }),
 
-/***/ 729:
+/***/ 731:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -1201,7 +1201,7 @@ webpackJsonp([1],{
 
 /***/ }),
 
-/***/ 730:
+/***/ 732:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
