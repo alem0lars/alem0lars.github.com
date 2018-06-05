@@ -49,9 +49,9 @@ class ContactForm extends React.Component {
   handleChange = event => {
     const target = event.target;
     const value = target.value;
-    const name = target.name;
+    const id = target.id;
 
-    this.setState({ [name]: value });
+    this.setState({ [id]: value });
   };
 
   handleNetworkError = e => {
@@ -59,7 +59,7 @@ class ContactForm extends React.Component {
   };
 
   handleSubmit = e => {
-    fetch("/", {
+    fetch("https://formspree.io/molari.alessandro@gmail.com", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({ "form-name": "contact", ...this.state })
@@ -86,8 +86,6 @@ class ContactForm extends React.Component {
         onError={errors => console.log(errors)}
         name="contact"
         ref={f => (this.form = f)}
-        data-netlify="true"
-        data-netlify-honeypot="bot-field"
       >
         {submitError && <p className={classes.submitError}>{submitError}</p>}
         <TextValidator
@@ -104,7 +102,7 @@ class ContactForm extends React.Component {
         />
         <TextValidator
           id="email"
-          name="email"
+          name="_replyto"
           label="E-mail"
           value={email}
           onChange={this.handleChange}
@@ -133,6 +131,7 @@ class ContactForm extends React.Component {
           color="primary"
           size="large"
           type="submit"
+          value="Send"
           className={classes.submit}
         >
           Send

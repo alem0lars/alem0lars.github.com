@@ -82,7 +82,7 @@ class Layout extends React.Component {
   };
 
   resizeHandler = () => {
-    this.props.setIsWideScreen(isWideScreen());
+    this.props.setIsWideScreen(isWideScreen(getTheme(this.props.themeName)));
   };
 
   render() {
