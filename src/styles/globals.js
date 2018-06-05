@@ -1,9 +1,7 @@
-import theme from "./theme";
+import theme from "./light-theme"; // FIXME
 
 export default {
-  /*
-      BEGINNING OF NORMALIZE STYLE
-    */
+  /* NORMALIZE STYLE */
 
   "@global": {
     /**
@@ -313,13 +311,7 @@ export default {
       display: "none"
     },
 
-    /*
-      END OF NORMALIZE STYLE
-    */
-
-    /*
-      BEGiNNIG OF CUTSOM GLOBAL STYLE
-     */
+    /*BEGINNING OF CUSTOM GLOBAL STYLE */
 
     html: {
       boxSizing: "border-box",

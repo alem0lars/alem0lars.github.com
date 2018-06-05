@@ -1,4 +1,4 @@
-const colors = require("../../src/styles/colors");
+const lightColors = require("../../src/styles/light-colors");
 
 module.exports = {
   siteTitle: "alem0lars website & blog", // <title>
@@ -19,8 +19,8 @@ module.exports = {
   manifestName: "Personal website & blog of Alessandro Molari",
   manifestShortName: "alem0lars blog", // max 12 characters
   manifestStartUrl: "/",
-  manifestBackgroundColor: colors.background,
-  manifestThemeColor: colors.background,
+  manifestBackgroundColor: lightColors.background,
+  manifestThemeColor: lightColors.background,
   manifestDisplay: "standalone",
   // contact
   contactEmail: "molari.alessandro@gmail.com",

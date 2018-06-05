@@ -12,13 +12,17 @@ import SearchIcon from "material-ui-icons/Search";
 import ArrowUpwardIcon from "material-ui-icons/ArrowUpward";
 import FullscreenIcon from "material-ui-icons/Fullscreen";
 import FullscreenExitIcon from "material-ui-icons/FullscreenExit";
+import BrightnessLowIcon from "material-ui-icons/BrightnessLow";
+
+import { getNextThemeName } from "../../styles/themes";
 
 import {
   setNavigatorPosition,
   setNavigatorShape,
   setScrollToTop,
   setFontSizeIncrease,
-  setCategoryFilter
+  setCategoryFilter,
+  setTheme
 } from "../../state/store";
 import { featureNavigator, moveNavigatorAside } from "./../../utils/shared";
 import FontSetter from "./FontSetter";
@@ -121,8 +125,18 @@ class ActionsBar extends React.Component {
     this.props.setCategoryFilter(val);
   };
 
+  changeThemeOnClick = val => {
+    this.props.setTheme(getNextThemeName(this.props.themeName));
+  };
+
   render() {
-    const { classes, navigatorPosition, navigatorShape, isWideScreen, categories } = this.props;
+    const {
+      classes,
+      navigatorPosition,
+      navigatorShape,
+      isWideScreen,
+      categories
+    } = this.props;
 
     return (
       <div className={classes.actionsBar}>
@@ -135,8 +149,12 @@ class ActionsBar extends React.Component {
           >
             <HomeIcon />
           </IconButton>
-          {((isWideScreen && navigatorShape === "open") || navigatorPosition !== "is-aside") && (
-            <CategoryFilter categories={categories} filterCategory={this.categoryFilterOnClick} />
+          {((isWideScreen && navigatorShape === "open") ||
+            navigatorPosition !== "is-aside") && (
+            <CategoryFilter
+              categories={categories}
+              filterCategory={this.categoryFilterOnClick}
+            />
           )}
           <IconButton
             aria-label="Search"
@@ -151,7 +169,18 @@ class ActionsBar extends React.Component {
           </IconButton>
         </div>
         <div className={classes.group}>
-          {navigatorPosition === "is-aside" && <FontSetter increaseFont={this.fontSetterOnClick} />}
+          {navigatorPosition === "is-aside" && (
+            <FontSetter increaseFont={this.fontSetterOnClick} />
+          )}
+
+          <IconButton
+            aria-label="Change Theme"
+            onClick={this.changeThemeOnClick}
+            title="Change Theme"
+          >
+            <BrightnessLowIcon className={classes.button} />
+          </IconButton>
+
           {screenfull.enabled && (
             <IconButton
               aria-label="Fullscreen"
@@ -159,10 +188,19 @@ class ActionsBar extends React.Component {
               title="Fullscreen mode"
               className={classes.button}
             >
-              {this.state.fullscreen ? <FullscreenExitIcon /> : <FullscreenIcon />}
+              {this.state.fullscreen ? (
+                <FullscreenExitIcon />
+              ) : (
+                <FullscreenIcon />
+              )}
             </IconButton>
           )}
-          <IconButton aria-label="Back to top" onClick={this.arrowUpOnClick} title="Scroll to top">
+
+          <IconButton
+            aria-label="Back to top"
+            onClick={this.arrowUpOnClick}
+            title="Scroll to top"
+          >
             <ArrowUpwardIcon className={classes.button} />
           </IconButton>
         </div>
@@ -180,7 +218,8 @@ ActionsBar.propTypes = {
   setFontSizeIncrease: PropTypes.func.isRequired,
   categories: PropTypes.array.isRequired,
   setCategoryFilter: PropTypes.func.isRequired,
-  categoryFilter: PropTypes.string.isRequired
+  categoryFilter: PropTypes.string.isRequired,
+  themeName: PropTypes.string.isRequired
 };
 
 const mapStateToProps = (state, ownProps) => {
@@ -188,7 +227,8 @@ const mapStateToProps = (state, ownProps) => {
     navigatorPosition: state.navigatorPosition,
     navigatorShape: state.navigatorShape,
     isWideScreen: state.isWideScreen,
-    categoryFilter: state.categoryFilter
+    categoryFilter: state.categoryFilter,
+    themeName: state.themeName
   };
 };
 
@@ -197,7 +237,11 @@ const mapDispatchToProps = {
   setNavigatorShape,
   setScrollToTop,
   setFontSizeIncrease,
-  setCategoryFilter
+  setCategoryFilter,
+  setTheme
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(injectSheet(styles)(ActionsBar));
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(injectSheet(styles)(ActionsBar));

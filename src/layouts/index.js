@@ -4,7 +4,7 @@ import { MuiThemeProvider } from "material-ui/styles";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 
-import theme from "../styles/theme";
+import { themes, getTheme } from "../styles/themes";
 import globals from "../styles/globals";
 
 import { setFontSizeIncrease, setIsWideScreen } from "../state/store";
@@ -24,8 +24,13 @@ const InfoBox = asyncComponent(
         return module;
       })
       .catch(error => {}),
+  // FIXME support theme changes
   <Loading
-    overrides={{ width: `${theme.info.sizes.width}px`, height: "100vh", right: "auto" }}
+    overrides={{
+      width: `${themes[0].data.info.sizes.width}px`,
+      height: "100vh",
+      right: "auto"
+    }}
     afterRight={true}
   />
 );
@@ -35,7 +40,8 @@ class Layout extends React.Component {
   categories = [];
 
   componentDidMount() {
-    this.props.setIsWideScreen(isWideScreen());
+    const theme = getTheme(this.props.themeName);
+    this.props.setIsWideScreen(isWideScreen(theme));
     if (typeof window !== "undefined") {
       window.addEventListener("resize", this.resizeThrottler, false);
     }
@@ -67,7 +73,12 @@ class Layout extends React.Component {
   };
 
   resizeThrottler = () => {
-    return timeoutThrottlerHandler(this.timeouts, "resize", 500, this.resizeHandler);
+    return timeoutThrottlerHandler(
+      this.timeouts,
+      "resize",
+      500,
+      this.resizeHandler
+    );
   };
 
   resizeHandler = () => {
@@ -75,11 +86,12 @@ class Layout extends React.Component {
   };
 
   render() {
-    const { children, data } = this.props;
+    const { children, data, themeName } = this.props;
+    const theme = getTheme(themeName);
 
-    // TODO: dynamic management of tabindexes for keybord navigation
+    // TODO: dynamic management of tabindexes for keyboard navigation
     return (
-      <MuiThemeProvider theme={theme}>
+      <MuiThemeProvider theme={theme} sheetsManager={new Map()}>
         <div
           style={{
             padding: "1px",
@@ -95,7 +107,30 @@ class Layout extends React.Component {
           <Navigator posts={data.posts.edges} />
           <ActionsBar categories={this.categories} />
           <InfoBar pages={data.pages.edges} parts={data.parts.edges} />
-          {this.props.isWideScreen && <InfoBox pages={data.pages.edges} parts={data.parts.edges} />}
+          {this.props.isWideScreen && (
+            <InfoBox pages={data.pages.edges} parts={data.parts.edges} />
+          )}
+
+          <script
+            key={`webfontsloader-setup`}
+            dangerouslySetInnerHTML={{
+              __html: `
+              WebFontConfig = {
+                google: {
+                  families: ["${theme.base.fonts.styledFamily}:${
+                theme.base.fonts.styledFonts
+              }"]
+                }
+              };
+
+              (function(d) {
+                  var wf = d.createElement('script'), s = d.scripts[0];
+                  wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js';
+                  wf.async = true;
+                  s.parentNode.insertBefore(wf, s);
+              })(document);`
+            }}
+          />
         </div>
       </MuiThemeProvider>
     );
@@ -108,14 +143,16 @@ Layout.propTypes = {
   setIsWideScreen: PropTypes.func.isRequired,
   isWideScreen: PropTypes.bool.isRequired,
   fontSizeIncrease: PropTypes.number.isRequired,
-  setFontSizeIncrease: PropTypes.func.isRequired
+  setFontSizeIncrease: PropTypes.func.isRequired,
+  themeName: PropTypes.string.isRequired
 };
 
 const mapStateToProps = (state, ownProps) => {
   return {
     pages: state.pages,
     isWideScreen: state.isWideScreen,
-    fontSizeIncrease: state.fontSizeIncrease
+    fontSizeIncrease: state.fontSizeIncrease,
+    themeName: state.themeName
   };
 };
 
@@ -124,7 +161,10 @@ const mapDispatchToProps = {
   setFontSizeIncrease
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(injectSheet(globals)(Layout));
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(injectSheet(globals)(Layout));
 
 //eslint-disable-next-line no-undef
 export const guery = graphql`

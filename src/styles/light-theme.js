@@ -1,38 +1,36 @@
-// This is a custom theme, for details go to http://forgatsby.greglobinski.com/customize-personal-blog-starter/
-
 import { createMuiTheme } from "material-ui/styles";
 import Color from "color";
 
-import colors from "./new-colors";
+import colors from "./light-colors";
 
 const theme = createMuiTheme({
   base: {
     colors: {
       background: colors.background,
-      text: colors.bright,
+      text: colors.dark,
       link: colors.accent,
       linkHover: Color(colors.accent)
         .lighten(0.1)
         .string(),
       accent: colors.accent,
-      lines: colors.gray
+      lines: colors.superLightGray
     },
     sizes: {
       linesMargin: "20px"
     },
     fonts: {
       unstyledFamily: `Arial`,
-      styledFamily: "IBM Plex Serif",
+      styledFamily: "Open Sans",
       styledFonts: "300,400,600"
     }
   },
   info: {
     colors: {
-      text: colors.bright,
+      text: colors.gray,
       background: colors.background,
       socialIcons: colors.lightGray,
       socialIconsHover: colors.accent,
-      menuLink: colors.bright,
+      menuLink: colors.gray,
       menuLinkHover: colors.accent
     },
     sizes: {
@@ -48,9 +46,9 @@ const theme = createMuiTheme({
   navigator: {
     colors: {
       background: colors.background,
-      postsListItemLink: colors.bright,
+      postsListItemLink: colors.gray,
       postsListItemLinkHover: colors.accent,
-      postsHeader: colors.bright
+      postsHeader: colors.gray
     },
     sizes: {
       closedHeight: 80,
@@ -63,16 +61,16 @@ const theme = createMuiTheme({
   main: {
     colors: {
       background: colors.background,
-      title: colors.bright,
-      subTitle: colors.bright,
-      meta: colors.bright,
-      content: colors.bright,
-      footer: colors.bright,
-      contentHeading: colors.bright,
-      blockquoteFrame: colors.dark,
+      title: colors.gray,
+      subTitle: colors.gray,
+      meta: colors.gray,
+      content: colors.dark,
+      footer: colors.gray,
+      contentHeading: colors.gray,
+      blockquoteFrame: colors.lightGray,
       link: colors.accent,
       linkHover: colors.dark,
-      fbCommentsColorscheme: "dark"
+      fbCommentsColorscheme: "light"
     },
     sizes: {
       articleMaxWidth: "50em"
@@ -134,8 +132,8 @@ const theme = createMuiTheme({
   bars: {
     colors: {
       background: colors.background,
-      icon: colors.bright,
-      text: colors.bright
+      icon: colors.gray,
+      text: colors.gray
     },
     sizes: {
       actionsBar: 60,
@@ -148,16 +146,17 @@ const theme = createMuiTheme({
   },
   palette: {
     primary: {
-      main: "#709425"
-    },
-    type: "dark",
-    action: {
-      hover: "rgba(0, 0, 0, 0.01)"
+      main: colors.accent
     }
   },
   typography: {
     fontFamily: `Arial, sans-serif`,
     fontSize: 16
+  },
+  pallete: {
+    action: {
+      hover: "rgba(0, 0, 0, 0.01)"
+    }
   }
 });
 

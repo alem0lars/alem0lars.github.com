@@ -32,7 +32,8 @@ const styles = theme => ({
   },
   svg: {
     width: "22px",
-    height: "22px"
+    height: "22px",
+    pointerEvents: "none"
   },
   header: {
     textAlign: "center",
@@ -67,7 +68,6 @@ const StackIcons = props => {
                 className={classes.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                title={item.name}
               >
                 <Icon className={classes.svg} />
               </a>

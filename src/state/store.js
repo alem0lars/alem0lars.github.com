@@ -1,6 +1,8 @@
 import { createStore as reduxCreateStore, applyMiddleware } from "redux";
 import { composeWithDevTools } from "redux-devtools-extension";
 
+import { initialState } from "./initial-state";
+
 /*
  * action types
  */
@@ -12,6 +14,7 @@ const SET_IS_WIDE_SCREEN = "SET_IS_WIDE_SCREEN";
 const SET_SCROLL_TO_TOP = "SET_SCROLL_TO_TOP";
 const SET_FONT_SIZE_INCREASE = "SET_FONT_SIZE_INCREASE";
 const SET_CATEGORY_FILTER = "SET_CATEGORY_FILTER";
+const SET_THEME = "SET_THEME";
 
 /*
  * action creators
@@ -43,6 +46,10 @@ export function setFontSizeIncrease(val) {
 
 export function setCategoryFilter(val) {
   return { type: SET_CATEGORY_FILTER, val };
+}
+
+export function setTheme(val) {
+  return { type: SET_THEME, val };
 }
 
 /*
@@ -92,21 +99,22 @@ const reducer = (state, action) => {
         categoryFilter: action.val
       };
 
+    case SET_THEME:
+      return {
+        ...state,
+        themeName: action.val
+      };
+
     default:
       return state;
   }
 };
 
-const initialState = {
-  navigatorPosition: "is-aside",
-  navigatorShape: "open",
-  navigatorFilter: "",
-  isWideScreen: false,
-  scrollToTop: false,
-  fontSizeIncrease: 1,
-  categoryFilter: "all posts"
-};
 
 const createStore = () =>
-  reduxCreateStore(reducer, initialState, composeWithDevTools(applyMiddleware()));
+  reduxCreateStore(
+    reducer,
+    initialState,
+    composeWithDevTools(applyMiddleware())
+  );
 export default createStore;

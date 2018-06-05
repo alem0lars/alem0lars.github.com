@@ -30,7 +30,8 @@ const styles = theme => ({
     width: "30px",
     height: "30px",
     fill: theme.info.colors.socialIcons,
-    transition: "all .5s"
+    transition: "all .5s",
+    pointerEvents: "none"
   }
 });
 
@@ -56,7 +57,6 @@ const Socialcons = props => {
               className={classes.link}
               target="_blank"
               rel="noopener noreferrer"
-              title={item.name}
             >
               <Icon className={classes.svg} />
             </a>

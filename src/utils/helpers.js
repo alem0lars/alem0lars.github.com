@@ -1,6 +1,4 @@
-import theme from "../styles/theme";
-
-export function isWideScreen() {
+export function isWideScreen(theme) {
   if (typeof window !== `undefined`) {
     const windowWidth = window.innerWidth;
     const mediaQueryL = theme.mediaQueryTresholds.L;
