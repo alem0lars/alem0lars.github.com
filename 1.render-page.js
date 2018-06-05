@@ -1,14 +1,14 @@
 exports.ids = [1];
 exports.modules = {
 
-/***/ 664:
+/***/ 669:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
 	
 	exports.__esModule = true;
 	
-	var _InfoBox = __webpack_require__(665);
+	var _InfoBox = __webpack_require__(670);
 	
 	Object.defineProperty(exports, "default", {
 	  enumerable: true,
@@ -23,7 +23,7 @@ exports.modules = {
 
 /***/ }),
 
-/***/ 665:
+/***/ 670:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -44,27 +44,27 @@ exports.modules = {
 	
 	var _reactRedux = __webpack_require__(448);
 	
-	var _SocialIcons = __webpack_require__(666);
+	var _SocialIcons = __webpack_require__(671);
 	
 	var _SocialIcons2 = _interopRequireDefault(_SocialIcons);
 	
-	var _InfoMenu = __webpack_require__(674);
+	var _InfoMenu = __webpack_require__(679);
 	
 	var _InfoMenu2 = _interopRequireDefault(_InfoMenu);
 	
-	var _InfoHeader = __webpack_require__(675);
+	var _InfoHeader = __webpack_require__(680);
 	
 	var _InfoHeader2 = _interopRequireDefault(_InfoHeader);
 	
-	var _InfoText = __webpack_require__(677);
+	var _InfoText = __webpack_require__(682);
 	
 	var _InfoText2 = _interopRequireDefault(_InfoText);
 	
-	var _StackIcons = __webpack_require__(678);
+	var _StackIcons = __webpack_require__(683);
 	
 	var _StackIcons2 = _interopRequireDefault(_StackIcons);
 	
-	var _shared = __webpack_require__(520);
+	var _shared = __webpack_require__(524);
 	
 	var _store = __webpack_require__(477);
 	
@@ -76,7 +76,7 @@ exports.modules = {
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-	__webpack_require__(682);
+	__webpack_require__(687);
 	
 	var styles = function styles(theme) {
 	  var _infoBox;
@@ -206,7 +206,7 @@ exports.modules = {
 
 /***/ }),
 
-/***/ 666:
+/***/ 671:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -225,23 +225,23 @@ exports.modules = {
 	
 	var _reactJss2 = _interopRequireDefault(_reactJss);
 	
-	var _Tooltip = __webpack_require__(667);
+	var _Tooltip = __webpack_require__(672);
 	
 	var _Tooltip2 = _interopRequireDefault(_Tooltip);
 	
-	var _config = __webpack_require__(659);
+	var _config = __webpack_require__(664);
 	
 	var _config2 = _interopRequireDefault(_config);
 	
-	var _github = __webpack_require__(669);
+	var _github = __webpack_require__(674);
 	
-	var _facebook = __webpack_require__(670);
+	var _facebook = __webpack_require__(675);
 	
-	var _twitter = __webpack_require__(671);
+	var _twitter = __webpack_require__(676);
 	
-	var _linkedin = __webpack_require__(672);
+	var _linkedin = __webpack_require__(677);
 	
-	var _instagram = __webpack_require__(673);
+	var _instagram = __webpack_require__(678);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -265,7 +265,8 @@ exports.modules = {
 	      width: "30px",
 	      height: "30px",
 	      fill: theme.info.colors.socialIcons,
-	      transition: "all .5s"
+	      transition: "all .5s",
+	      pointerEvents: "none"
 	    }
 	  };
 	};
@@ -296,8 +297,7 @@ exports.modules = {
 	            href: item.url,
 	            className: classes.link,
 	            target: "_blank",
-	            rel: "noopener noreferrer",
-	            title: item.name
+	            rel: "noopener noreferrer"
 	          },
 	          _react2.default.createElement(Icon, { className: classes.svg })
 	        )
@@ -315,7 +315,7 @@ exports.modules = {
 
 /***/ }),
 
-/***/ 667:
+/***/ 672:
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -324,7 +324,7 @@ exports.modules = {
 	  value: true
 	});
 	
-	var _Tooltip = __webpack_require__(668);
+	var _Tooltip = __webpack_require__(673);
 	
 	Object.defineProperty(exports, 'default', {
 	  enumerable: true,
@@ -337,7 +337,7 @@ exports.modules = {
 
 /***/ }),
 
-/***/ 668:
+/***/ 673:
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -387,13 +387,13 @@ exports.modules = {
 	
 	var _propTypes2 = _interopRequireDefault(_propTypes);
 	
-	var _reactDom = __webpack_require__(508);
+	var _reactDom = __webpack_require__(512);
 	
-	var _reactEventListener = __webpack_require__(598);
+	var _reactEventListener = __webpack_require__(603);
 	
 	var _reactEventListener2 = _interopRequireDefault(_reactEventListener);
 	
-	var _debounce = __webpack_require__(593);
+	var _debounce = __webpack_require__(598);
 	
 	var _debounce2 = _interopRequireDefault(_debounce);
 	
@@ -401,15 +401,15 @@ exports.modules = {
 	
 	var _warning2 = _interopRequireDefault(_warning);
 	
-	var _classnames = __webpack_require__(502);
+	var _classnames = __webpack_require__(506);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
-	var _reactPopper = __webpack_require__(649);
+	var _reactPopper = __webpack_require__(654);
 	
-	var _helpers = __webpack_require__(503);
+	var _helpers = __webpack_require__(507);
 	
-	var _RefHolder = __webpack_require__(612);
+	var _RefHolder = __webpack_require__(617);
 	
 	var _RefHolder2 = _interopRequireDefault(_RefHolder);
 	
@@ -857,7 +857,7 @@ exports.modules = {
 
 /***/ }),
 
-/***/ 669:
+/***/ 674:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -907,7 +907,7 @@ exports.modules = {
 
 /***/ }),
 
-/***/ 670:
+/***/ 675:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -957,7 +957,7 @@ exports.modules = {
 
 /***/ }),
 
-/***/ 671:
+/***/ 676:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -1007,7 +1007,7 @@ exports.modules = {
 
 /***/ }),
 
-/***/ 672:
+/***/ 677:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -1057,7 +1057,7 @@ exports.modules = {
 
 /***/ }),
 
-/***/ 673:
+/***/ 678:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -1107,7 +1107,7 @@ exports.modules = {
 
 /***/ }),
 
-/***/ 674:
+/***/ 679:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -1199,7 +1199,7 @@ exports.modules = {
 
 /***/ }),
 
-/***/ 675:
+/***/ 680:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -1222,19 +1222,19 @@ exports.modules = {
 	
 	var _gatsbyLink2 = _interopRequireDefault(_gatsbyLink);
 	
-	var _IconButton = __webpack_require__(523);
+	var _IconButton = __webpack_require__(527);
 	
 	var _IconButton2 = _interopRequireDefault(_IconButton);
 	
-	var _ExpandMore = __webpack_require__(676);
+	var _ExpandMore = __webpack_require__(681);
 	
 	var _ExpandMore2 = _interopRequireDefault(_ExpandMore);
 	
-	var _avatar2 = __webpack_require__(660);
+	var _avatar2 = __webpack_require__(665);
 	
 	var _avatar3 = _interopRequireDefault(_avatar2);
 	
-	var _config = __webpack_require__(659);
+	var _config = __webpack_require__(664);
 	
 	var _config2 = _interopRequireDefault(_config);
 	
@@ -1386,7 +1386,7 @@ exports.modules = {
 
 /***/ }),
 
-/***/ 676:
+/***/ 681:
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1399,11 +1399,11 @@ exports.modules = {
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _pure = __webpack_require__(550);
+	var _pure = __webpack_require__(554);
 	
 	var _pure2 = _interopRequireDefault(_pure);
 	
-	var _SvgIcon = __webpack_require__(555);
+	var _SvgIcon = __webpack_require__(559);
 	
 	var _SvgIcon2 = _interopRequireDefault(_SvgIcon);
 	
@@ -1428,7 +1428,7 @@ exports.modules = {
 
 /***/ }),
 
-/***/ 677:
+/***/ 682:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -1487,7 +1487,7 @@ exports.modules = {
 
 /***/ }),
 
-/***/ 678:
+/***/ 683:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -1506,19 +1506,19 @@ exports.modules = {
 	
 	var _reactJss2 = _interopRequireDefault(_reactJss);
 	
-	var _Tooltip = __webpack_require__(667);
+	var _Tooltip = __webpack_require__(672);
 	
 	var _Tooltip2 = _interopRequireDefault(_Tooltip);
 	
-	var _config = __webpack_require__(659);
+	var _config = __webpack_require__(664);
 	
 	var _config2 = _interopRequireDefault(_config);
 	
-	var _gentoo = __webpack_require__(679);
+	var _gentoo = __webpack_require__(684);
 	
-	var _xmonad = __webpack_require__(680);
+	var _xmonad = __webpack_require__(685);
 	
-	var _vim = __webpack_require__(681);
+	var _vim = __webpack_require__(686);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -1547,7 +1547,8 @@ exports.modules = {
 	    },
 	    svg: {
 	      width: "22px",
-	      height: "22px"
+	      height: "22px",
+	      pointerEvents: "none"
 	    },
 	    header: {
 	      textAlign: "center",
@@ -1593,8 +1594,7 @@ exports.modules = {
 	              href: item.url,
 	              className: classes.link,
 	              target: "_blank",
-	              rel: "noopener noreferrer",
-	              title: item.name
+	              rel: "noopener noreferrer"
 	            },
 	            _react2.default.createElement(Icon, { className: classes.svg })
 	          )
@@ -1613,7 +1613,7 @@ exports.modules = {
 
 /***/ }),
 
-/***/ 679:
+/***/ 684:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -1679,7 +1679,7 @@ exports.modules = {
 
 /***/ }),
 
-/***/ 680:
+/***/ 685:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -1743,7 +1743,7 @@ exports.modules = {
 
 /***/ }),
 
-/***/ 681:
+/***/ 686:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
