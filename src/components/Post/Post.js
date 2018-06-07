@@ -9,14 +9,28 @@ import PostFooter from "./PostFooter";
 const Post = props => {
   const { post, author, slug, facebook } = props;
   const frontmatter = (post || {}).frontmatter;
-  const title = ((post || {}).frontmatter || {}).title;
-  const subTitle = ((post || {}).frontmatter || {}).subTitle;
+  const title = (frontmatter || {}).title;
+  const subTitle = (frontmatter || {}).subTitle;
+  const category = (frontmatter || {}).category || "Unknown";
+  const status = (frontmatter || {}).status || "Unknown";
+  const revision = (frontmatter || {}).revision || 1;
+  const confidence = (frontmatter || {}).confidence || "Unknown";
+  const importance = (frontmatter || {}).importance || "Unknown";
   const date = ((post || {}).fields || {}).prefix;
   const html = (post || {}).html;
 
   return (
     <Article>
-      <PostHeader title={title} subTitle={subTitle} date={date} />
+      <PostHeader
+        title={title}
+        subTitle={subTitle}
+        date={date}
+        category={category}
+        status={status}
+        revision={revision}
+        confidence={confidence}
+        importance={importance}
+      />
       <Content html={html} />
       <PostFooter author={author} post={post} slug={slug} facebook={facebook} />
     </Article>
