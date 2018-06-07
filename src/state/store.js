@@ -110,7 +110,6 @@ const reducer = (state, action) => {
   }
 };
 
-
 const createStore = () =>
   reduxCreateStore(
     reducer,

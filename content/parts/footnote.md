@@ -6,4 +6,4 @@ title: footnote
 * using the awesome triad
   [![Gentoo](/icons/gentoo.svg)](https://gentoo.org) &
   [![XMonad](/icons/xmonad.svg)](https://xmonad.org) &
-  [![Vim](/icons/vim.svg)](https://vim.org)
+  [![Vim](/icons/vim.svg)](https://www.vim.org)

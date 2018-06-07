@@ -47,6 +47,6 @@ module.exports = {
   builtWith: [
     { name: "gentoo", title: "Gentoo Linux", url: "https://gentoo.org" },
     { name: "xmonad", title: "XMonad WM", url: "https://xmonad.org" },
-    { name: "vim", title: "Vim", url: "https://vim.org" }
+    { name: "vim", title: "Vim", url: "https://www.vim.org" }
   ]
 };
