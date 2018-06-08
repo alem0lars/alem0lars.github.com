@@ -8,14 +8,16 @@ import PostFooter from "./PostFooter";
 
 const Post = props => {
   const { post, author, slug, facebook } = props;
+
   const frontmatter = (post || {}).frontmatter;
+
   const title = (frontmatter || {}).title;
   const subTitle = (frontmatter || {}).subTitle;
   const category = (frontmatter || {}).category || "Unknown";
   const status = (frontmatter || {}).status || "Unknown";
   const revision = (frontmatter || {}).revision || 1;
   const confidence = (frontmatter || {}).confidence || "Unknown";
-  const importance = (frontmatter || {}).importance || "Unknown";
+  const importance = (frontmatter || {}).importance || 1;
   const date = ((post || {}).fields || {}).prefix;
   const html = (post || {}).html;
 

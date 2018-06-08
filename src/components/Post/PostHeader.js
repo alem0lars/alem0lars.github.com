@@ -116,7 +116,7 @@ PostHeader.propTypes = {
   status: PropTypes.string.isRequired,
   revision: PropTypes.number.isRequired,
   confidence: PropTypes.string.isRequired,
-  importance: PropTypes.string.isRequired
+  importance: PropTypes.number.isRequired
 };
 
 export default injectSheet(styles)(PostHeader);

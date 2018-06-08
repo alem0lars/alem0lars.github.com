@@ -15,6 +15,11 @@ const query = `{
         frontmatter {
           title
           subTitle
+          category
+          status
+          revision
+          confidence
+          importance
         }
       }
     }

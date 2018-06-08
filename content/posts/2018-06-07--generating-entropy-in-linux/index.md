@@ -3,10 +3,10 @@ title: Generating Entropy in Linux
 subTitle: A walkthrough on the available solutions for feeding the kernel with some entropy
 category: Linux
 cover: entropy-cover.jpg
-status: Done
+status: "Done"
 revision: 1
-confidence: High
-importance:
+confidence: "Almost Certain"
+importance: 6
 ---
 
 In Linux, sometimes you may need to generate some entropy.
@@ -33,6 +33,8 @@ This program feeds random data from hardware device to kernel.
     rngd -r "/dev/urandom"
 
 Here we have used `rngd` program ([man 8 rngd](http://linux.die.net/man/8/rngd) for more details).
+
+This daemon feeds data from a random number generator to the kernel's random number entropy pool, after first checking the data to ensure that it is properly random.
 
 ## Audio Entropy Daemon
 

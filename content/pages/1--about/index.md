@@ -8,6 +8,5 @@ My other activities include Teaching & Coordinating in both private and academic
 
 Last but not least, I do some Vulnerability Research & Malware Analysis in my spare time, and I'm the current leader of CeSeNA Security.
 
-<!-- TODO 
-See https://christophetd.fr, https://www.gwern.net, mr
--->
+<!-- TODO -->
+*More content will be added soon.. Stay tuned!*

@@ -80,7 +80,7 @@ const theme = createMuiTheme({
         size: 1.9,
         sizeM: 2.5,
         sizeL: 2.7,
-        weight: 600,
+        weight: 400,
         lineHeight: 1.1
       },
       subTitle: {
@@ -92,7 +92,7 @@ const theme = createMuiTheme({
       },
       meta: {
         size: 0.9,
-        weight: 600
+        weight: 400
       },
       content: {
         size: 1.0,
@@ -103,7 +103,7 @@ const theme = createMuiTheme({
       contentHeading: {
         h2Size: 1.5,
         h3Size: 1.3,
-        weight: 600,
+        weight: 400,
         lineHeight: 1.3
       },
       footer: {

@@ -187,6 +187,10 @@ export const guery = graphql`
             title
             subTitle
             category
+            status
+            revision
+            confidence
+            importance
             cover {
               children {
                 ... on ImageSharp {
