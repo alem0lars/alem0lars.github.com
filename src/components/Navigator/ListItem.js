@@ -150,21 +150,38 @@ class ListItem extends React.Component {
           onClick={linkOnClick}
         >
           <div className={`${classes.listItemPointer} pointer`}>
-            <LazyLoad height={60} overflow={true} throttle={300} once={true} offset={100}>
+            <LazyLoad
+              height={60}
+              overflow={true}
+              throttle={300}
+              once={true}
+              offset={100}
+            >
               <picture>
                 <source
                   type="image/webp"
-                  srcSet={post.node.frontmatter.cover.children[0].resolutions.srcSetWebp}
+                  srcSet={
+                    post.node.frontmatter.cover.children[0].resolutions
+                      .srcSetWebp
+                  }
                 />
-                <source srcSet={post.node.frontmatter.cover.children[0].resolutions.srcSet} />
-                <img src={post.node.frontmatter.cover.children[0].resolutions.src} alt="" />
+                <source
+                  srcSet={
+                    post.node.frontmatter.cover.children[0].resolutions.srcSet
+                  }
+                />
+                <img
+                  src={post.node.frontmatter.cover.children[0].resolutions.src}
+                  alt=""
+                />
               </picture>
             </LazyLoad>
-            {/*<Img sizes={post.node.frontmatter.cover.children[0].sizes} />*/}
           </div>
           <div className={classes.listItemText}>
             <h1>{post.node.frontmatter.title}</h1>
-            {post.node.frontmatter.subTitle && <h2>{post.node.frontmatter.subTitle}</h2>}
+            {post.node.frontmatter.subTitle && (
+              <h2>{post.node.frontmatter.subTitle}</h2>
+            )}
           </div>
         </Link>
       </li>

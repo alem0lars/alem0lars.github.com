@@ -65,7 +65,7 @@ module.exports = {
           ? process.env.ALGOLIA_INDEX_NAME
           : "",
         queries,
-        chunkSize: 10000 // default: 1000
+        chunkSize: 10000
       }
     },
     {
