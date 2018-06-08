@@ -1,45 +1,21 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[alem0lars website & blog]]></title><description><![CDATA[Personal website & blog of Alessandro Molari, featuring current state of his CyberSecurity research, related news and activities]]></description><link>https://alessandro.molari.me</link><generator>RSS for Node</generator><lastBuildDate>Thu, 07 Jun 2018 08:06:12 GMT</lastBuildDate><item><title><![CDATA[Two things are infinite the universe and human stupidity]]></title><description><![CDATA[Proin suscipit luctus orci placerat fringilla. Donec hendrerit laoreet risus eget adipiscing. Suspendisse in urna ligula, a volutpat mauris…]]></description><link>https://alessandro.molari.me/two-things-are-infinite/</link><guid isPermaLink="false">https://alessandro.molari.me/two-things-are-infinite/</guid><content:encoded>&lt;p&gt;Proin suscipit luctus orci placerat fringilla. Donec hendrerit laoreet risus eget adipiscing. Suspendisse in urna ligula, a volutpat mauris. Sed enim mi, &lt;a href=&quot;http://google.com&quot;&gt;adipiscing&lt;/a&gt; eu pulvinar vel, sodales vitae dui. :thumbsup: :smile: :sparkler:&lt;/p&gt;
-&lt;p&gt;Pellentesque sed sapien lorem, at lacinia urna. In hac habitasse platea dictumst. Vivamus vel justo in leo laoreet ullamcorper non vitae lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin bibendum ullamcorper rutrum.&lt;/p&gt;
-&lt;p&gt;Fusce a metus eu diam varius congue nec nec sapien. Vestibulum orci tortor, sollicitudin ac euismod non, placerat ac augue. Nunc convallis accumsan justo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec malesuada vehicula lectus, viverra sodales ipsum gravida nec.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Proin ornare ligula eu tellus tempus elementum. Aenean bibendum iaculis mi, nec blandit lacus interdum vitae. Vestibulum non nibh risus, a scelerisque purus. Ut vel arcu ac tortor adipiscing hendrerit vel sed massa. Fusce sem libero, lacinia vulputate interdum non, porttitor non quam. Aliquam sed felis ligula. Duis non nulla magna.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Nullam eros mi, mollis in sollicitudin non, tincidunt sed enim. Sed et felis metus, rhoncus ornare nibh. Ut at magna leo. Suspendisse egestas est ac dolor imperdiet pretium. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam porttitor, erat sit amet venenatis luctus, augue libero ultrices quam, ut congue nisi risus eu purus. Cras semper consectetur elementum.&lt;/p&gt;
-&lt;h3&gt;Cras semper consectetur elementum&lt;/h3&gt;
-&lt;p&gt;Pellentesque sed sapien lorem, at lacinia urna. In hac habitasse platea dictumst. Vivamus vel justo in leo laoreet ullamcorper non vitae lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin bibendum ullamcorper rutrum.&lt;/p&gt;
-&lt;p&gt;
-  &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/photo-1490474418585-ba9bad8fd0ea-69657d5d9f9e2a2aa0aa1c3e268ce4a1-f16ff.jpg&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-  
-  &lt;span
-    class=&quot;gatsby-resp-image-wrapper&quot;
-    style=&quot;position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;&quot;
-  &gt;
-    &lt;span
-      class=&quot;gatsby-resp-image-background-image&quot;
-      style=&quot;padding-bottom: 66.66666666666666%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABAAC/8QAFgEBAQEAAAAAAAAAAAAAAAAAAgAB/9oADAMBAAIQAxAAAAHE42Q40x//xAAaEAACAgMAAAAAAAAAAAAAAAABAgMhBBEi/9oACAEBAAEFAkjYKVYqSN4twz8sxv8A/8QAFhEBAQEAAAAAAAAAAAAAAAAAABEB/9oACAEDAQE/AciP/8QAFhEBAQEAAAAAAAAAAAAAAAAAABEB/9oACAECAQE/Adqv/8QAHhAAAgEDBQAAAAAAAAAAAAAAAAECEBEhEjEyQdH/2gAIAQEABj8C1S4kntY9M9YE1T//xAAdEAADAAEFAQAAAAAAAAAAAAAAARGBITFBYXHB/9oACAEBAAE/IWLQZZGAnEjbk10G9x4E2lavwo8P/9oADAMBAAIAAwAAABCMP//EABYRAQEBAAAAAAAAAAAAAAAAAAEAMf/aAAgBAwEBPxBAyZ//xAAXEQADAQAAAAAAAAAAAAAAAAAAAREh/9oACAECAQE/EFq0WD//xAAcEAEAAgIDAQAAAAAAAAAAAAABESEAUTFBYaH/2gAIAQEAAT8QhoAZWUbDLWMAAyHDTE7zQHaWOKFFBe+0fcoAekfacanJkIJoWc//2Q==&apos;); background-size: cover; display: block;&quot;
-    &gt;
-      &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;&quot;
-        alt=&quot;unsplash.com&quot;
-        title=&quot;&quot;
-        src=&quot;/static/photo-1490474418585-ba9bad8fd0ea-69657d5d9f9e2a2aa0aa1c3e268ce4a1-78f2b.jpg&quot;
-        srcset=&quot;/static/photo-1490474418585-ba9bad8fd0ea-69657d5d9f9e2a2aa0aa1c3e268ce4a1-dce19.jpg 200w,
-/static/photo-1490474418585-ba9bad8fd0ea-69657d5d9f9e2a2aa0aa1c3e268ce4a1-c1413.jpg 400w,
-/static/photo-1490474418585-ba9bad8fd0ea-69657d5d9f9e2a2aa0aa1c3e268ce4a1-78f2b.jpg 800w,
-/static/photo-1490474418585-ba9bad8fd0ea-69657d5d9f9e2a2aa0aa1c3e268ce4a1-ab4c4.jpg 1200w,
-/static/photo-1490474418585-ba9bad8fd0ea-69657d5d9f9e2a2aa0aa1c3e268ce4a1-f16ff.jpg 1500w&quot;
-        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
-      /&gt;
-    &lt;/span&gt;
-  &lt;/span&gt;
-  
-  &lt;/a&gt;
-    &lt;/p&gt;
-&lt;p&gt;Proin suscipit luctus orci placerat fringilla. Donec hendrerit laoreet risus eget adipiscing. Suspendisse in urna ligula, a volutpat mauris. Sed enim mi, bibendum eu pulvinar vel, sodales vitae dui. Pellentesque sed sapien lorem, at lacinia urna. In hac habitasse platea dictumst. Vivamus vel justo in leo laoreet ullamcorper non vitae lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin bibendum ullamcorper rutrum.&lt;/p&gt;</content:encoded></item></channel></rss>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[alem0lars website & blog]]></title><description><![CDATA[Personal website & blog of Alessandro Molari, featuring current state of his CyberSecurity research, related news and activities]]></description><link>https://alessandro.molari.me</link><generator>RSS for Node</generator><lastBuildDate>Fri, 08 Jun 2018 07:05:25 GMT</lastBuildDate><item><title><![CDATA[Generating Entropy in Linux]]></title><description><![CDATA[In Linux, sometimes you may need to generate some entropy. Solutions There are both  hardware  and  software  solutions: Hardware solutions…]]></description><link>https://alessandro.molari.me/generating-entropy-in-linux/</link><guid isPermaLink="false">https://alessandro.molari.me/generating-entropy-in-linux/</guid><content:encoded>&lt;p&gt;In Linux, sometimes you may need to generate some entropy.&lt;/p&gt;
+&lt;h1&gt;Solutions&lt;/h1&gt;
+&lt;p&gt;There are both &lt;em&gt;hardware&lt;/em&gt; and &lt;em&gt;software&lt;/em&gt; solutions:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Hardware solutions&lt;/strong&gt;: they can &lt;em&gt;generate more entropy per second&lt;/em&gt;, but you need physical access&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Software solutions&lt;/strong&gt;: they have less performance, but you just need &lt;code class=&quot;language-text&quot;&gt;root&lt;/code&gt; permissions (no physical access)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;Hardware solutions&lt;/h1&gt;
+&lt;p&gt;Typically it’s a USB device that &lt;em&gt;generates and streams some random numbers&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;One of such devices is &lt;a href=&quot;http://ubld.it/products/truerng-hardware-random-number-generator&quot;&gt;TrueRNG&lt;/a&gt; (price is approx: 50$).&lt;/p&gt;
+&lt;h1&gt;Software solutions&lt;/h1&gt;
+&lt;h2&gt;RNGD&lt;/h2&gt;
+&lt;p&gt;This program feeds random data from hardware device to kernel.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;rngd -r &amp;quot;/dev/urandom&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;Here we have used &lt;code class=&quot;language-text&quot;&gt;rngd&lt;/code&gt; program (&lt;a href=&quot;http://linux.die.net/man/8/rngd&quot;&gt;man 8 rngd&lt;/a&gt; for more details).&lt;/p&gt;
+&lt;h2&gt;Audio Entropy Daemon&lt;/h2&gt;
+&lt;p&gt;This program feeds the &lt;code class=&quot;language-text&quot;&gt;/dev/random&lt;/code&gt; device with entropy-data read from an audio device.&lt;/p&gt;
+&lt;p&gt;The audio-data is not copied as is but first &lt;em&gt;de-biased&lt;/em&gt; and analysed to determine how much bits of entropy is in it.&lt;/p&gt;
+&lt;p&gt;The official website of the program is &lt;a href=&quot;https://www.vanheusden.com/aed&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;</content:encoded></item></channel></rss>
