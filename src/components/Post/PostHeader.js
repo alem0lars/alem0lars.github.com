@@ -94,7 +94,9 @@ const PostHeader = props => {
             <TableRow>
               <TableCell padding="dense">{category}</TableCell>
               <TableCell padding="dense">{status}</TableCell>
-              <TableCell padding="dense">R-{revision.toString().padStart(3, "0")}</TableCell>
+              <TableCell padding="dense">
+                R-{revision.toString().padStart(3, "0")}
+              </TableCell>
               <TableCell padding="dense">{confidence}</TableCell>
               <TableCell padding="dense">{importance}</TableCell>
             </TableRow>

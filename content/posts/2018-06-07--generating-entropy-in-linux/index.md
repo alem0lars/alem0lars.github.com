@@ -3,10 +3,10 @@ title: Generating Entropy in Linux
 subTitle: A walkthrough on the available solutions for feeding the kernel with some entropy
 category: Linux
 cover: entropy-cover.jpg
-# status:
-# revision: 1
-# confidence:
-# importance:
+status: Done
+revision: 1
+confidence: High
+importance:
 ---
 
 In Linux, sometimes you may need to generate some entropy.
