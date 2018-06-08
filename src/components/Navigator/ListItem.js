@@ -158,18 +158,6 @@ class ListItem extends React.Component {
               offset={100}
             >
               <picture>
-                <source
-                  type="image/webp"
-                  srcSet={
-                    post.node.frontmatter.cover.children[0].resolutions
-                      .srcSetWebp
-                  }
-                />
-                <source
-                  srcSet={
-                    post.node.frontmatter.cover.children[0].resolutions.srcSet
-                  }
-                />
                 <img
                   src={post.node.frontmatter.cover.children[0].resolutions.src}
                   alt=""
