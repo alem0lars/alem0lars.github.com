@@ -118,7 +118,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 <!-- Badges -->
 [coc-badge]: https://img.shields.io/badge/code%20of-conduct-ff69b4.svg?style=flat-square
-[coc]: https://github.com/alem0lars/alem0lars.github.com/blob/master/CODE_OF_CONDUCT.md
+[coc]: https://github.com/alem0lars/alem0lars.github.com/blob/source/CODE_OF_CONDUCT.md
 [prs-badge]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square
 [prs]: http://makeapullrequest.com
 [tag-badge]: https://img.shields.io/github/tag/alem0lars/alem0lars.github.com.svg
@@ -130,7 +130,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 [prettier-badge]: https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square
 [prettier]: https://github.com/prettier/prettier
 [mit-badge]: https://img.shields.io/github/license/alem0lars/alem0lars.github.com.svg
-[mit]: https://github.com/alem0lars/alem0lars.github.com/blob/master/LICENSE
+[mit]: https://github.com/alem0lars/alem0lars.github.com/blob/source/LICENSE
 
 <!-- Others -->
 [gatsby]: https://www.gatsbyjs.org
