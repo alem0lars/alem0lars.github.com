@@ -1,5 +1,4 @@
 const webpack = require("webpack");
-//const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 const _ = require("lodash");
 const Promise = require("bluebird");
 const path = require("path");
@@ -106,15 +105,6 @@ exports.modifyWebpackConfig = ({ config, stage }) => {
             }
           ]
         );
-        // config.plugin("BundleAnalyzerPlugin", BundleAnalyzerPlugin, [
-        //   {
-        //     analyzerMode: "static",
-        //     reportFilename: "./report/treemap.html",
-        //     openAnalyzer: true,
-        //     logLevel: "error",
-        //     defaultSizes: "gzip"
-        //   }
-        // ]);
       }
       break;
   }

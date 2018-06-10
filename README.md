@@ -12,7 +12,7 @@ Source code of alem0lars website & blog. <br /> <br />
 
   <br />
 
-![](static/screens/alem0lars.github.com.gif) <br />
+![](static/icons/icon-144x144.png) <br />
 
   <br />
 

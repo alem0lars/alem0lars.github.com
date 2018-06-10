@@ -72,7 +72,11 @@ class TopMenu extends React.Component {
             className={classNames({ [classes.popperClose]: !open })}
           >
             <ClickAwayListener onClickAway={this.handleClose}>
-              <Grow in={open} id="menu-list" style={{ transformOrigin: "0 0 0" }}>
+              <Grow
+                in={open}
+                id="menu-list"
+                style={{ transformOrigin: "0 0 0" }}
+              >
                 <Paper>
                   <MenuList role="menu">
                     <MenuItem
@@ -87,18 +91,25 @@ class TopMenu extends React.Component {
                       const { fields, frontmatter } = page.node;
 
                       return (
-                        <a key={fields.slug} href={fields.slug} style={{ display: "block" }}>
+                        <a
+                          key={fields.slug}
+                          href={fields.slug}
+                          style={{ display: "block" }}
+                        >
                           <MenuItem
                             onClick={e => {
                               this.props.pageLinkOnClick(e);
                               this.handleClose();
                             }}
                           >
-                            {frontmatter.menuTitle ? frontmatter.menuTitle : frontmatter.title}
+                            {frontmatter.menuTitle
+                              ? frontmatter.menuTitle
+                              : frontmatter.title}
                           </MenuItem>
                         </a>
                       );
                     })}
+
                     <a href="/contact/" style={{ display: "block" }}>
                       <MenuItem
                         onClick={e => {

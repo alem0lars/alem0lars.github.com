@@ -9,8 +9,10 @@ import createStore from "./src/state/store";
 // one added on the client
 exports.onInitialClientRender = function() {
   // eslint-disable-next-line no-undef
-  var ssStyles = window.document.getElementById("server-side-jss");
-  ssStyles && ssStyles.parentNode.removeChild(ssStyles);
+  const serverSideStyle = window.document.getElementById("server-side-jss");
+  if (serverSideStyle) {
+    serverSideStyle.parentNode.removeChild(serverSideStyle);
+  }
 };
 
 exports.replaceRouterComponent = ({ history }) => {
