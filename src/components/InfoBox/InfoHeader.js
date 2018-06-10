@@ -7,7 +7,7 @@ import IconButton from "material-ui/IconButton";
 import ExpandMoreIcon from "material-ui-icons/ExpandMore";
 
 import avatar from "../../images/jpg/avatar.jpg";
-import config from "../../../content/meta/config";
+import { infoTitle, infoTitleNote } from "../../../config/meta";
 
 const styles = theme => ({
   header: {
@@ -111,14 +111,19 @@ const InfoHeader = props => {
 
   return (
     <header className={classes.header}>
-      <Link className={classes.avatarLink} onClick={avatarOnClick} to="/" title="back to Home page">
+      <Link
+        className={classes.avatarLink}
+        onClick={avatarOnClick}
+        to="/"
+        title="back to Home page"
+      >
         <div className={classes.avatar}>
           <img src={avatar} alt="" />
         </div>
       </Link>
       <h1 className={classes.title}>
-        {config.infoTitle.replace(/ /g, "\u00a0")}
-        <small>{config.infoTitleNote}</small>
+        {infoTitle.replace(/ /g, "\u00a0")}
+        <small>{infoTitleNote}</small>
       </h1>
       <IconButton
         aria-label="Expand the box"

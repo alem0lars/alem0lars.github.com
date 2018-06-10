@@ -1,4 +1,4 @@
-const lightColors = require("../../src/styles/light-colors");
+const lightColors = require("../src/styles/light-colors");
 
 module.exports = {
   siteTitle: "alem0lars website & blog", // <title>

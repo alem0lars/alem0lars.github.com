@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import injectSheet from "react-jss";
 import Tooltip from "material-ui/Tooltip";
 
-import config from "../../../content/meta/config";
+import { builtWith } from "../../../config/meta";
 
 import { ReactComponent as GentooIcon } from "../../images/svg-icons/gentoo.svg";
 import { ReactComponent as XMonadIcon } from "../../images/svg-icons/xmonad.svg";
@@ -48,7 +48,7 @@ const styles = theme => ({
 const StackIcons = props => {
   const { classes } = props;
 
-  const items = config.builtWith;
+  const items = builtWith;
   const icons = {
     gentoo: GentooIcon,
     xmonad: XMonadIcon,

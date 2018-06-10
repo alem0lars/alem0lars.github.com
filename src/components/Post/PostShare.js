@@ -15,7 +15,7 @@ import {
   LinkedinIcon
 } from "react-share";
 
-import config from "../../../content/meta/config";
+import { siteUrl, pathPrefix } from "../../../config/meta";
 
 const styles = theme => ({
   share: {
@@ -50,7 +50,7 @@ class PostShare extends React.Component {
     const { post, classes, slug } = this.props;
     const { excerpt, frontmatter } = post;
     const { title } = frontmatter;
-    const url = config.siteUrl + config.pathPrefix + slug;
+    const url = siteUrl + pathPrefix + slug;
 
     const iconSize = 36;
     const filter = count => (count > 0 ? count : "");

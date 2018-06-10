@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import injectSheet from "react-jss";
 import Avatar from "material-ui/Avatar";
 
-import config from "../../../content/meta/config";
+import config from "../../../config/meta";
 import avatar from "../../images/jpg/avatar.jpg";
 
 const styles = theme => ({
@@ -47,7 +47,10 @@ const PostAuthor = props => {
   return (
     <div className={classes.author}>
       <Avatar src={avatar} className={classes.avatar} alt={config.authorName} />
-      <div className={classes.box} dangerouslySetInnerHTML={{ __html: author.html }} />
+      <div
+        className={classes.box}
+        dangerouslySetInnerHTML={{ __html: author.html }}
+      />
     </div>
   );
 };

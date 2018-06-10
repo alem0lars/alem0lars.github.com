@@ -8,7 +8,7 @@ import { connect } from "react-redux";
 import { setNavigatorPosition } from "../../state/store";
 import { featureNavigator, moveNavigatorAside } from "./../../utils/shared";
 
-import config from "../../../content/meta/config";
+import { infoTitle, infoTitleNote } from "../../../config/meta";
 import avatar from "../../images/jpg/avatar.jpg";
 import TopMenu from "./TopMenu";
 
@@ -65,12 +65,16 @@ class InfoBar extends React.Component {
 
     return (
       <aside className={classes.infoBar}>
-        <Link to="/" className={classes.avatarLink} onClick={this.homeLinkOnClick}>
-          <Avatar alt={config.infoTitle} src={avatar} className={classes.avatar} />
+        <Link
+          to="/"
+          className={classes.avatarLink}
+          onClick={this.homeLinkOnClick}
+        >
+          <Avatar alt={infoTitle} src={avatar} className={classes.avatar} />
         </Link>
         <h3 className={classes.title}>
-          {config.infoTitle}
-          <small>{config.infoTitleNote}</small>
+          {infoTitle}
+          <small>{infoTitleNote}</small>
         </h3>
         <TopMenu
           pages={pages}
@@ -98,4 +102,7 @@ const mapDispatchToProps = {
   setNavigatorPosition
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(injectSheet(styles)(InfoBar));
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(injectSheet(styles)(InfoBar));

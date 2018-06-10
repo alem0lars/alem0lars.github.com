@@ -1,7 +1,16 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Helmet from "react-helmet";
-import config from "../../../content/meta/config";
+import {
+  siteTitle,
+  siteDescription,
+  shortSiteTitle,
+  siteImage,
+  pathPrefix,
+  siteUrl,
+  siteLanguage,
+  authorTwitterAccount
+} from "../../../config/meta";
 
 const Seo = props => {
   const { data, facebook } = props;
@@ -10,15 +19,15 @@ const Seo = props => {
   const postCover = ((data || {}).frontmatter || {}).cover;
   const postSlug = ((data || {}).fields || {}).slug;
 
-  const title = postTitle ? `${postTitle} - ${config.shortSiteTitle}` : config.siteTitle;
-  const description = postDescription ? postDescription : config.siteDescription;
-  const image = postCover ? postCover : config.siteImage;
-  const url = config.siteUrl + config.pathPrefix + postSlug;
+  const title = postTitle ? `${postTitle} - ${shortSiteTitle}` : siteTitle;
+  const description = postDescription ? postDescription : siteDescription;
+  const image = postCover ? postCover : siteImage;
+  const url = siteUrl + pathPrefix + postSlug;
 
   return (
     <Helmet
       htmlAttributes={{
-        lang: config.siteLanguage,
+        lang: siteLanguage,
         prefix: "og: http://ogp.me/ns#"
       }}
     >
@@ -36,7 +45,7 @@ const Seo = props => {
       <meta name="twitter:card" content="summary" />
       <meta
         name="twitter:creator"
-        content={config.authorTwitterAccount ? config.authorTwitterAccount : ""}
+        content={authorTwitterAccount ? authorTwitterAccount : ""}
       />
     </Helmet>
   );

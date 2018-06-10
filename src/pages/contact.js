@@ -8,7 +8,7 @@ import Article from "../components/Main/Article";
 import PageHeader from "../components/Page/PageHeader";
 import Content from "../components/Main/Content";
 import Form from "../components/ContactForm";
-import config from "../../content/meta/config";
+import { contactEmail } from "../../config/meta";
 
 const styles = theme => ({});
 
@@ -18,8 +18,8 @@ const Contact = () => {
       <Article>
         <PageHeader title="Contact" />
         <Content>
-          Feel free to contact me by email:{" "}
-          <Obfuscate email={config.contactEmail} /> or use the form below.
+          Feel free to contact me by email: <Obfuscate email={contactEmail} />{" "}
+          or use the form below.
         </Content>
         <Form />
       </Article>

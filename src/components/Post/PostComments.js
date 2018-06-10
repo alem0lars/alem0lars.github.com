@@ -4,7 +4,7 @@ import injectSheet from "react-jss";
 import FacebookProvider, { Comments } from "react-facebook";
 require("core-js/fn/array/find");
 
-import config from "../../../content/meta/config";
+import { siteUrl } from "../../../config/meta";
 
 const styles = theme => ({
   postComments: {
@@ -21,7 +21,7 @@ const PostComments = props => {
     <div id="post-comments" className={classes.postComments}>
       <FacebookProvider appId={facebook}>
         <Comments
-          href={`${config.siteUrl}${slug}`}
+          href={`${siteUrl}${slug}`}
           width="100%"
           colorScheme={props.theme.main.colors.fbCommentsColorscheme}
         />

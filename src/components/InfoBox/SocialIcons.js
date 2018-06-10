@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import injectSheet from "react-jss";
 import Tooltip from "material-ui/Tooltip";
 
-import config from "../../../content/meta/config";
+import { authorSocialLinks } from "../../../config/meta";
 
 import { ReactComponent as GithubIcon } from "../../images/svg-icons/github.svg";
 import { ReactComponent as FacebookIcon } from "../../images/svg-icons/facebook.svg";
@@ -37,7 +37,7 @@ const styles = theme => ({
 
 const Socialcons = props => {
   const { classes } = props;
-  const items = config.authorSocialLinks;
+  const items = authorSocialLinks;
   const icons = {
     twitter: TwitterIcon,
     facebook: FacebookIcon,
