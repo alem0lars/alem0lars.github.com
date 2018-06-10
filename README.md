@@ -5,16 +5,14 @@ Source code of alem0lars website & blog. <br /> <br />
 [![GitHub license][mit-badge]][mit]
 [![GitHub tag][tag-badge]][tag]
 [![GitHub stars][stars-badge]][stars]
-![contributors][contributors-badge]
+[![contributors][contributors-badge]][contributors]
 [![PRs Welcome][prs-badge]][prs]
 [![Code of Conduct][coc-badge]][coc]
 [![code style prettier][prettier-badge]][prettier]
 
-  <br />
+<br />
 
-![](static/icons/icon-144x144.png) <br />
-
-  <br />
+![](static/icons/icon-144x144.png#center) <br />
 
 See the website in action » [here][website] <br />
 For more information visit » [project page][project-page]
@@ -128,6 +126,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 [stars-badge]: https://img.shields.io/github/stars/alem0lars/alem0lars.github.com.svg
 [stars]: https://github.com/alem0lars/alem0lars.github.com/stargazers
 [contributors-badge]: https://img.shields.io/github/contributors/alem0lars/alem0lars.github.com.svg
+[contributors]: https://github.com/alem0lars/alem0lars.github.com/graphs/contributors
 [prettier-badge]: https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square
 [prettier]: https://github.com/prettier/prettier
 [mit-badge]: https://img.shields.io/github/license/alem0lars/alem0lars.github.com.svg
@@ -136,3 +135,10 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 <!-- Others -->
 [gatsby]: https://www.gatsbyjs.org
 [gatsby-starter-personal-blog]: https://github.com/greglobinski/gatsby-starter-personal-blog
+
+<style>
+img[src*='#center'] { 
+    display: block;
+    margin: auto;
+}
+</style>
