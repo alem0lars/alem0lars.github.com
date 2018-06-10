@@ -229,9 +229,7 @@ exports.modules = {
 	
 	var _Tooltip2 = _interopRequireDefault(_Tooltip);
 	
-	var _config = __webpack_require__(665);
-	
-	var _config2 = _interopRequireDefault(_config);
+	var _meta = __webpack_require__(665);
 	
 	var _github = __webpack_require__(676);
 	
@@ -274,7 +272,7 @@ exports.modules = {
 	var Socialcons = function Socialcons(props) {
 	  var classes = props.classes;
 	
-	  var items = _config2.default.authorSocialLinks;
+	  var items = _meta.authorSocialLinks;
 	  var icons = {
 	    twitter: _twitter.ReactComponent,
 	    facebook: _facebook.ReactComponent,
@@ -692,9 +690,7 @@ exports.modules = {
 	
 	var _avatar3 = _interopRequireDefault(_avatar2);
 	
-	var _config = __webpack_require__(665);
-	
-	var _config2 = _interopRequireDefault(_config);
+	var _meta = __webpack_require__(665);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -803,7 +799,12 @@ exports.modules = {
 	    { className: classes.header },
 	    _react2.default.createElement(
 	      _gatsbyLink2.default,
-	      { className: classes.avatarLink, onClick: avatarOnClick, to: "/", title: "back to Home page" },
+	      {
+	        className: classes.avatarLink,
+	        onClick: avatarOnClick,
+	        to: "/",
+	        title: "back to Home page"
+	      },
 	      _react2.default.createElement(
 	        "div",
 	        { className: classes.avatar },
@@ -813,11 +814,11 @@ exports.modules = {
 	    _react2.default.createElement(
 	      "h1",
 	      { className: classes.title },
-	      _config2.default.infoTitle.replace(/ /g, "\xA0"),
+	      _meta.infoTitle.replace(/ /g, "\xA0"),
 	      _react2.default.createElement(
 	        "small",
 	        null,
-	        _config2.default.infoTitleNote
+	        _meta.infoTitleNote
 	      )
 	    ),
 	    _react2.default.createElement(
@@ -968,9 +969,7 @@ exports.modules = {
 	
 	var _Tooltip2 = _interopRequireDefault(_Tooltip);
 	
-	var _config = __webpack_require__(665);
-	
-	var _config2 = _interopRequireDefault(_config);
+	var _meta = __webpack_require__(665);
 	
 	var _gentoo = __webpack_require__(686);
 	
@@ -1023,7 +1022,7 @@ exports.modules = {
 	  var classes = props.classes;
 	
 	
-	  var items = _config2.default.builtWith;
+	  var items = _meta.builtWith;
 	  var icons = {
 	    gentoo: _gentoo.ReactComponent,
 	    xmonad: _xmonad.ReactComponent,

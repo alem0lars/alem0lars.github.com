@@ -22,9 +22,7 @@ exports.modules = {
 	
 	var _reactShare = __webpack_require__(796);
 	
-	var _config = __webpack_require__(665);
-	
-	var _config2 = _interopRequireDefault(_config);
+	var _meta = __webpack_require__(665);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -82,7 +80,7 @@ exports.modules = {
 	        frontmatter = post.frontmatter;
 	    var title = frontmatter.title;
 	
-	    var url = _config2.default.siteUrl + _config2.default.pathPrefix + slug;
+	    var url = _meta.siteUrl + _meta.pathPrefix + slug;
 	
 	    var iconSize = 36;
 	    var filter = function filter(count) {
