@@ -8,7 +8,8 @@ import { setFontSizeIncrease } from "../../state/store";
 const styles = theme => ({
   content: {
     color: theme.main.colors.content,
-    fontSize: props => `calc(${theme.main.fonts.content.size}em * ${props.fontSizeIncrease})`,
+    fontSize: props =>
+      `calc(${theme.main.fonts.content.size}em * ${props.fontSizeIncrease})`,
     lineHeight: theme.main.fonts.content.lineHeight,
     "& a": {
       color: theme.base.colors.link
@@ -93,7 +94,12 @@ const Content = props => {
   const { classes, html, children } = props;
 
   if (html) {
-    return <div className={classes.content} dangerouslySetInnerHTML={{ __html: html }} />;
+    return (
+      <div
+        className={classes.content}
+        dangerouslySetInnerHTML={{ __html: html }}
+      />
+    );
   } else {
     return <div className={classes.content}>{children}</div>;
   }
@@ -117,4 +123,7 @@ const mapDispatchToProps = {
   setFontSizeIncrease
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(injectSheet(styles)(Content));
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(injectSheet(styles)(Content));

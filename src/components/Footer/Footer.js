@@ -7,12 +7,16 @@ import Footnote from "./Footnote";
 const styles = theme => ({
   footer: {
     color: theme.main.colors.footer,
-    padding: `1.5rem 1.5rem  calc(${theme.bars.sizes.actionsBar}px + 1.5rem) 1.5rem`,
+    padding: `1.5rem 1.5rem  calc(${
+      theme.bars.sizes.actionsBar
+    }px + 1.5rem) 1.5rem`,
     "& p": {
       margin: 0
     },
     [`@media (min-width: ${theme.mediaQueryTresholds.M}px)`]: {
-      padding: `2rem 2.5rem  calc(${theme.bars.sizes.actionsBar}px + 2rem) 2.5rem`
+      padding: `2rem 2.5rem  calc(${
+        theme.bars.sizes.actionsBar
+      }px + 2rem) 2.5rem`
     },
     [`@media (min-width: ${theme.mediaQueryTresholds.L}px)`]: {
       padding: `2rem 3rem 2rem 3rem`

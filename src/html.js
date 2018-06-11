@@ -1,16 +1,18 @@
-/* eslint  react/prop-types: 0 */
 import React from "react";
+
+import PropTypes from "prop-types";
 
 let stylesStr;
 if (process.env.NODE_ENV === `production`) {
   try {
+    // eslint-disable-next-line global-require
     stylesStr = require(`!raw-loader!../public/styles.css`);
   } catch (e) {
     console.log(e);
   }
 }
 
-module.exports = class HTML extends React.Component {
+class HTML extends React.Component {
   render() {
     let css;
     if (process.env.NODE_ENV === `production`) {
@@ -21,6 +23,7 @@ module.exports = class HTML extends React.Component {
         />
       );
     }
+
     return (
       <html {...this.props.htmlAttributes}>
         <head>
@@ -116,4 +119,17 @@ module.exports = class HTML extends React.Component {
       </html>
     );
   }
+}
+
+HTML.propTypes = {
+  body: PropTypes.string.isRequired,
+  htmlAttributes: PropTypes.object.isRequired,
+  headAttributes: PropTypes.object.isRequired,
+  preBodyAttributes: PropTypes.object.isRequired,
+  bodyAttributes: PropTypes.object.isRequired,
+  headComponents: PropTypes.object.isRequired,
+  preBodyComponents: PropTypes.object.isRequired,
+  postBodyComponents: PropTypes.object.isRequired
 };
+
+module.exports = HTML;

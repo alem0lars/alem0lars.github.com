@@ -46,14 +46,14 @@ const theme = createMuiTheme({
   navigator: {
     colors: {
       background: colors.background,
-      postsListItemLink: colors.gray,
-      postsListItemLinkHover: colors.accent,
+      elementsListItemLink: colors.gray,
+      elementsListItemLinkHover: colors.accent,
       postsHeader: colors.gray
     },
     sizes: {
       closedHeight: 80,
-      postsListItemH1Font: 1.3,
-      postsListItemH2Font: 1.1,
+      elementsListItemH1Font: 1.3,
+      elementsListItemH2Font: 1.1,
       fontIncraseForM: 1.15,
       fontIncraseForL: 1.3
     }

@@ -7,7 +7,9 @@ const styles = theme => ({
     background: theme.main.colors.background,
     maxWidth: theme.main.sizes.articleMaxWidth,
     margin: "0 auto",
-    padding: `calc(${theme.bars.sizes.infoBar}px + 1.5rem) 1.5rem  1.5rem 1.5rem`,
+    padding: `calc(${
+      theme.bars.sizes.infoBar
+    }px + 1.5rem) 1.5rem  1.5rem 1.5rem`,
     "& strong, & b": {
       letterSpacing: "-.02em"
     },

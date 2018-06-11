@@ -7,6 +7,7 @@ export const initialState = {
   isWideScreen: false,
   scrollToTop: false,
   fontSizeIncrease: 1,
-  categoryFilter: "all posts",
-  themeName: getDefaultTheme().name
+  categoryFilter: "all",
+  themeName: getDefaultTheme().name,
+  navigatorActiveTabIndex: 0
 };

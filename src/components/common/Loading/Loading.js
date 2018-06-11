@@ -11,11 +11,17 @@ const styles = theme => ({
         ? props.overrides.background
         : theme.base.colors.background,
     position: "absolute",
-    left: props => (props.overrides && props.overrides.left ? props.overrides.left : 0),
-    right: props => (props.overrides && props.overrides.right ? props.overrides.right : 0),
+    left: props =>
+      props.overrides && props.overrides.left ? props.overrides.left : 0,
+    right: props =>
+      props.overrides && props.overrides.right ? props.overrides.right : 0,
     top: "0",
-    width: props => (props.overrides && props.overrides.width ? props.overrides.width : "100%"),
-    height: props => (props.overrides && props.overrides.height ? props.overrides.height : "100%"),
+    width: props =>
+      props.overrides && props.overrides.width ? props.overrides.width : "100%",
+    height: props =>
+      props.overrides && props.overrides.height
+        ? props.overrides.height
+        : "100%",
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
@@ -38,7 +44,10 @@ const Loading = props => {
 
   return (
     <div className={classes.loading}>
-      <CircularProgress className={classes.progress} size={progressSize ? progressSize : 30} />
+      <CircularProgress
+        className={classes.progress}
+        size={progressSize ? progressSize : 30}
+      />
     </div>
   );
 };

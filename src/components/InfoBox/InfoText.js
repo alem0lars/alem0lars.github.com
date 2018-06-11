@@ -23,7 +23,9 @@ const InfoText = props => {
   const { classes, info } = props;
   const text = info.node.html;
 
-  return <div className={classes.text} dangerouslySetInnerHTML={{ __html: text }} />;
+  return (
+    <div className={classes.text} dangerouslySetInnerHTML={{ __html: text }} />
+  );
 };
 
 InfoText.propTypes = {

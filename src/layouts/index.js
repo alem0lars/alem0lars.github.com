@@ -91,7 +91,6 @@ class Layout extends React.Component {
     const { children, data, themeName } = this.props;
     const theme = getTheme(themeName);
 
-    // TODO: dynamic management of tabindexes for keyboard navigation
     return (
       <MuiThemeProvider theme={theme} sheetsManager={new Map()}>
         <div
@@ -107,7 +106,10 @@ class Layout extends React.Component {
         >
           {children()}
           <GlobalStyles />
-          <Navigator posts={data.posts.edges} />
+          <Navigator
+            posts={data.posts.edges}
+            slideshows={data.slideshows.edges}
+          />
           <ActionsBar categories={this.categories} />
           <InfoBar pages={data.pages.edges} parts={data.parts.edges} />
           {this.props.isWideScreen && (
@@ -142,17 +144,19 @@ class Layout extends React.Component {
 
 Layout.propTypes = {
   data: PropTypes.object.isRequired,
+
   children: PropTypes.func.isRequired,
-  setIsWideScreen: PropTypes.func.isRequired,
+
   isWideScreen: PropTypes.bool.isRequired,
   fontSizeIncrease: PropTypes.number.isRequired,
-  setFontSizeIncrease: PropTypes.func.isRequired,
-  themeName: PropTypes.string.isRequired
+  themeName: PropTypes.string.isRequired,
+
+  setIsWideScreen: PropTypes.func.isRequired,
+  setFontSizeIncrease: PropTypes.func.isRequired
 };
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    pages: state.pages,
     isWideScreen: state.isWideScreen,
     fontSizeIncrease: state.fontSizeIncrease,
     themeName: state.themeName
@@ -169,9 +173,19 @@ export default connect(
   mapDispatchToProps
 )(injectSheet({})(Layout));
 
+// TODO slideshows (sort and right fields)
 //eslint-disable-next-line no-undef
-export const guery = graphql`
+export const query = graphql`
   query LayoutQuery {
+    slideshows: allFile(
+      filter: { id: { regex: "//slideshows//" } }
+    ) {
+      edges {
+        node {
+          name
+        }
+      }
+    }
     posts: allMarkdownRemark(
       filter: { id: { regex: "//posts//" } }
       sort: { fields: [fields___prefix], order: DESC }

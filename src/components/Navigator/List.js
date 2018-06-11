@@ -1,8 +1,14 @@
 import React from "react";
-import PropTypes from "prop-types";
 import injectSheet from "react-jss";
 import { forceCheck } from "react-lazyload";
+import { connect } from "react-redux";
 
+import PropTypes from "prop-types";
+
+import Tabs from "material-ui/Tabs/Tabs";
+import Tab from "material-ui/Tabs/Tab";
+
+import { setNavigatorActiveTabIndex } from "../../state/store";
 import ListHeader from "./ListHeader";
 import SpringScrollbars from "../SpringScrollbars";
 import ListItem from "./ListItem";
@@ -49,16 +55,43 @@ class List extends React.Component {
     }
   }
 
+  handleNavigatorActiveTabChange = (event, value) => {
+    this.props.setNavigatorActiveTabIndex(value);
+  };
+
   render() {
     const {
-      classes,
       posts,
+      slideshows,
       linkOnClick,
       expandOnClick,
       categoryFilter,
       navigatorShape,
-      removeFilter
+      removeFilter,
+
+      classes,
+
+      navigatorActiveTabIndex
     } = this.props;
+
+    const elements =
+      navigatorActiveTabIndex == 0
+        ? posts.map(post => ({
+            title: post.node.frontmatter.title,
+            subTitle: post.node.frontmatter.subTitle,
+            category: post.node.frontmatter.category,
+            slug: post.node.fields.slug,
+            coverSrc: post.node.frontmatter.cover.children[0].resolutions.src
+          }))
+        : navigatorActiveTabIndex == 1
+          ? slideshows.map(slideshow => ({
+              title: "THIS IS TITLE", // TODO
+              subTitle: "THIS IS SUBTITLE", // TODO
+              category: "slideshow", // TODO
+              slug: "/this-is-slug", // TODO
+              coverSrc: "/this-is-cover-src.jpg" // TODO
+            }))
+          : [];
 
     return (
       <div className={classes.posts}>
@@ -70,17 +103,28 @@ class List extends React.Component {
               navigatorShape={navigatorShape}
               removeFilter={removeFilter}
             />
-            <ul className={classes.list}>
-              {posts &&
-                posts.map((post, i) => (
-                  <ListItem
-                    key={i}
-                    post={post}
-                    linkOnClick={linkOnClick}
-                    categoryFilter={categoryFilter}
-                  />
-                ))}
-            </ul>
+
+            <div className={classes.list}>
+              <Tabs
+                value={navigatorActiveTabIndex}
+                onChange={this.handleNavigatorActiveTabChange}
+              >
+                <Tab label="Posts" />
+                <Tab label="Slideshows" />
+              </Tabs>
+
+              <ul>
+                {elements &&
+                  elements.map((element, i) => (
+                    <ListItem
+                      key={i}
+                      element={element}
+                      linkOnClick={linkOnClick}
+                      categoryFilter={categoryFilter}
+                    />
+                  ))}
+              </ul>
+            </div>
           </div>
         </SpringScrollbars>
       </div>
@@ -89,14 +133,31 @@ class List extends React.Component {
 }
 
 List.propTypes = {
-  classes: PropTypes.object.isRequired,
   posts: PropTypes.array.isRequired,
-  linkOnClick: PropTypes.func.isRequired,
-  expandOnClick: PropTypes.func.isRequired,
+  slideshows: PropTypes.array.isRequired,
   navigatorPosition: PropTypes.string.isRequired,
   navigatorShape: PropTypes.string.isRequired,
+  linkOnClick: PropTypes.func.isRequired,
+  expandOnClick: PropTypes.func.isRequired,
   categoryFilter: PropTypes.string.isRequired,
-  removeFilter: PropTypes.func.isRequired
+  removeFilter: PropTypes.func.isRequired,
+
+  classes: PropTypes.object.isRequired,
+
+  navigatorActiveTabIndex: PropTypes.number.isRequired,
+
+  setNavigatorActiveTabIndex: PropTypes.func.isRequired
 };
 
-export default injectSheet(styles)(List);
+const mapStateToProps = (state, ownProps) => ({
+  navigatorActiveTabIndex: state.navigatorActiveTabIndex
+});
+
+const mapDispatchToProps = {
+  setNavigatorActiveTabIndex
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(injectSheet(styles)(List));

@@ -14,11 +14,17 @@ class SpringScrollbars extends Component {
   }
 
   componentDidUpdate(prevProps, prevState) {
-    if (this.props.isNavigator && this.props.navigatorPosition !== "is-featured") {
+    if (
+      this.props.isNavigator &&
+      this.props.navigatorPosition !== "is-featured"
+    ) {
       return;
     }
 
-    if (this.props.scrollToTop && this.props.scrollToTop !== prevProps.scrollToTop) {
+    if (
+      this.props.scrollToTop &&
+      this.props.scrollToTop !== prevProps.scrollToTop
+    ) {
       this.scrollTop(0);
       this.props.setScrollToTop(false);
     }
@@ -108,4 +114,7 @@ const mapDispatchToProps = {
   setScrollToTop
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(SpringScrollbars);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(SpringScrollbars);

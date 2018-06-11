@@ -4,7 +4,11 @@ import PropTypes from "prop-types";
 import injectSheet from "react-jss";
 import { forceCheck } from "react-lazyload";
 
-import { setNavigatorPosition, setNavigatorShape, setCategoryFilter } from "../../state/store";
+import {
+  setNavigatorPosition,
+  setNavigatorShape,
+  setCategoryFilter
+} from "../../state/store";
 import { moveNavigatorAside } from "./../../utils/shared";
 import List from "./List";
 
@@ -31,7 +35,9 @@ const styles = theme => ({
     [`@media (min-width: ${theme.mediaQueryTresholds.L}px)`]: {
       "&.is-featured": {
         transition: "left .9s",
-        width: `calc(100vw - ${theme.info.sizes.width}px - ${theme.bars.sizes.actionsBar}px)`,
+        width: `calc(100vw - ${theme.info.sizes.width}px - ${
+          theme.bars.sizes.actionsBar
+        }px)`,
         left: `${theme.info.sizes.width}px`,
         top: 0
       },
@@ -42,7 +48,9 @@ const styles = theme => ({
         zIndex: 1,
         top: "auto",
         "&.closed": {
-          bottom: `calc(-100% + 100px + ${theme.navigator.sizes.closedHeight}px)`,
+          bottom: `calc(-100% + 100px + ${
+            theme.navigator.sizes.closedHeight
+          }px)`,
           height: `calc(100% - 100px)`
         },
         "&.open": {
@@ -108,21 +116,29 @@ class Navigator extends React.Component {
   };
 
   removefilterOnClick = e => {
-    this.props.setCategoryFilter("all posts");
+    this.props.setCategoryFilter("all");
   };
 
   render() {
-    const { classes, posts, navigatorPosition, navigatorShape, categoryFilter } = this.props;
+    const {
+      classes,
+      posts,
+      slideshows,
+      navigatorPosition,
+      navigatorShape,
+      categoryFilter
+    } = this.props;
 
     return (
       <nav
-        className={`${classes.navigator} ${navigatorPosition ? navigatorPosition : ""} ${
-          navigatorShape ? navigatorShape : ""
-        } `}
+        className={`${classes.navigator} ${
+          navigatorPosition ? navigatorPosition : ""
+        } ${navigatorShape ? navigatorShape : ""} `}
       >
         {this.props.posts.length && (
           <List
             posts={posts}
+            slideshows={slideshows}
             navigatorPosition={navigatorPosition}
             navigatorShape={navigatorShape}
             linkOnClick={this.linkOnClick}
@@ -138,13 +154,17 @@ class Navigator extends React.Component {
 
 Navigator.propTypes = {
   posts: PropTypes.array.isRequired,
+  slideshows: PropTypes.array.isRequired,
+
   classes: PropTypes.object.isRequired,
+
   navigatorPosition: PropTypes.string.isRequired,
   navigatorShape: PropTypes.string.isRequired,
-  setNavigatorPosition: PropTypes.func.isRequired,
-  setNavigatorShape: PropTypes.func.isRequired,
   isWideScreen: PropTypes.bool.isRequired,
   categoryFilter: PropTypes.string.isRequired,
+
+  setNavigatorPosition: PropTypes.func.isRequired,
+  setNavigatorShape: PropTypes.func.isRequired,
   setCategoryFilter: PropTypes.func.isRequired
 };
 
@@ -163,4 +183,7 @@ const mapDispatchToProps = {
   setCategoryFilter
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(injectSheet(styles)(Navigator));
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(injectSheet(styles)(Navigator));

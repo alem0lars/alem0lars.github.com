@@ -66,12 +66,20 @@ class InfoBox extends React.Component {
   };
 
   render() {
-    const { classes, parts, pages, navigatorPosition, navigatorShape } = this.props;
+    const {
+      classes,
+      parts,
+      pages,
+      navigatorPosition,
+      navigatorShape
+    } = this.props;
     const info = parts.find(el => el.node.frontmatter.title === "info");
 
     return (
       <aside
-        className={`${classes.infoBox} ${navigatorPosition ? navigatorPosition : ""} 
+        className={`${classes.infoBox} ${
+          navigatorPosition ? navigatorPosition : ""
+        }
         ${navigatorShape ? navigatorShape : ""}`}
       >
         {info && (
@@ -84,7 +92,9 @@ class InfoBox extends React.Component {
         <div className={classes.wrapper}>
           {info && <InfoText info={info} />}
           <SocialIcons />
-          {pages && <InfoMenu pages={pages} linkOnClick={this.menulinkOnClick} />}
+          {pages && (
+            <InfoMenu pages={pages} linkOnClick={this.menulinkOnClick} />
+          )}
           <StackIcons />
         </div>
       </aside>
@@ -115,4 +125,7 @@ const mapDispatchToProps = {
   setNavigatorShape
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(injectSheet(styles)(InfoBox));
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(injectSheet(styles)(InfoBox));

@@ -1,8 +1,9 @@
 import React from "react";
-import Link from "gatsby-link";
-import PropTypes from "prop-types";
 import injectSheet from "react-jss";
 import LazyLoad from "react-lazyload";
+import { connect } from "react-redux";
+import Link from "gatsby-link";
+import PropTypes from "prop-types";
 
 const styles = theme => ({
   listItem: {
@@ -24,10 +25,10 @@ const styles = theme => ({
     justifyContent: "flex-start",
     flexDirection: "row",
     padding: ".7em 1em .7em 1em",
-    color: theme.navigator.colors.postsListItemLink,
+    color: theme.navigator.colors.elementsListItemLink,
     "@media (hover: hover)": {
       "&:hover": {
-        color: theme.navigator.colors.postsListItemLinkHover,
+        color: theme.navigator.colors.elementsListItemLinkHover,
         "& .pointer": {
           borderRadius: "65% 75%"
         }
@@ -75,13 +76,13 @@ const styles = theme => ({
       fontWeight: 600,
       letterSpacing: "-0.03em",
       margin: 0,
-      fontSize: `${theme.navigator.sizes.postsListItemH1Font}em`,
+      fontSize: `${theme.navigator.sizes.elementsListItemH1Font}em`,
       [`@media (min-width: ${theme.mediaQueryTresholds.M}px)`]: {
-        fontSize: `${theme.navigator.sizes.postsListItemH1Font *
+        fontSize: `${theme.navigator.sizes.elementsListItemH1Font *
           theme.navigator.sizes.fontIncraseForM}em`
       },
       [`@media (min-width: ${theme.mediaQueryTresholds.L}px)`]: {
-        fontSize: `${theme.navigator.sizes.postsListItemH1Font *
+        fontSize: `${theme.navigator.sizes.elementsListItemH1Font *
           theme.navigator.sizes.fontIncraseForL}em`,
         ".moving-featured &, .is-aside &": {
           fontSize: "1em",
@@ -92,14 +93,14 @@ const styles = theme => ({
     "& h2": {
       lineHeight: 1.2,
       display: "block",
-      fontSize: `${theme.navigator.sizes.postsListItemH2Font}em`,
+      fontSize: `${theme.navigator.sizes.elementsListItemH2Font}em`,
       margin: ".3em 0 0 0",
       [`@media (min-width: ${theme.mediaQueryTresholds.M}px)`]: {
-        fontSize: `${theme.navigator.sizes.postsListItemH2Font *
+        fontSize: `${theme.navigator.sizes.elementsListItemH2Font *
           theme.navigator.sizes.fontIncraseForM}em`
       },
       [`@media (min-width: ${theme.mediaQueryTresholds.L}px)`]: {
-        fontSize: `${theme.navigator.sizes.postsListItemH2Font *
+        fontSize: `${theme.navigator.sizes.elementsListItemH2Font *
           theme.navigator.sizes.fontIncraseForL}em`,
         ".moving-featured &, .is-aside &": {
           display: "none"
@@ -120,33 +121,32 @@ class ListItem extends React.Component {
   };
 
   componentDidUpdate(prevProps, prevState) {
-    if (prevProps.categoryFilter !== this.props.categoryFilter) {
-      const category = this.props.post.node.frontmatter.category;
-      const categoryFilter = this.props.categoryFilter;
+    const { element, categoryFilter } = this.props;
 
-      if (categoryFilter === "all posts") {
+    if (prevProps.categoryFilter !== categoryFilter) {
+      if (categoryFilter === "all") {
         this.setState({ hidden: false });
-      } else if (category !== categoryFilter) {
+      } else if (element.category !== categoryFilter) {
         this.setState({ hidden: true });
-      } else if (category === categoryFilter) {
+      } else if (element.category === categoryFilter) {
         this.setState({ hidden: false });
       }
     }
   }
 
   render() {
-    const { classes, post, linkOnClick } = this.props;
+    const { classes, element, linkOnClick } = this.props;
 
     return (
       <li
-        className={`${classes.listItem} ${post.node.frontmatter.category}`}
+        className={`${classes.listItem} ${element.category}`}
         style={{ display: `${this.state.hidden ? "none" : "block"}` }}
-        key={post.node.fields.slug}
+        key={element.slug}
       >
         <Link
           activeClassName="active"
           className={classes.listLink}
-          to={post.node.fields.slug}
+          to={element.slug}
           onClick={linkOnClick}
         >
           <div className={`${classes.listItemPointer} pointer`}>
@@ -158,18 +158,13 @@ class ListItem extends React.Component {
               offset={100}
             >
               <picture>
-                <img
-                  src={post.node.frontmatter.cover.children[0].resolutions.src}
-                  alt=""
-                />
+                <img src={element.coverSrc} alt="" />
               </picture>
             </LazyLoad>
           </div>
           <div className={classes.listItemText}>
-            <h1>{post.node.frontmatter.title}</h1>
-            {post.node.frontmatter.subTitle && (
-              <h2>{post.node.frontmatter.subTitle}</h2>
-            )}
+            <h1>{element.title}</h1>
+            {element.subTitle && <h2>{element.subTitle}</h2>}
           </div>
         </Link>
       </li>
@@ -178,10 +173,18 @@ class ListItem extends React.Component {
 }
 
 ListItem.propTypes = {
-  classes: PropTypes.object.isRequired,
-  post: PropTypes.object.isRequired,
+  element: PropTypes.object.isRequired,
   linkOnClick: PropTypes.func.isRequired,
-  categoryFilter: PropTypes.string.isRequired
+  categoryFilter: PropTypes.string.isRequired,
+
+  classes: PropTypes.object.isRequired
 };
 
-export default injectSheet(styles)(ListItem);
+const mapStateToProps = (state, ownProps) => ({});
+
+const mapDispatchToProps = {};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(injectSheet(styles)(ListItem));

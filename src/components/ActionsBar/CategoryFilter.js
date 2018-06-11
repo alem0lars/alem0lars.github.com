@@ -77,14 +77,20 @@ class CategoryFilter extends React.Component {
           <Popper
             placement="bottom-end"
             eventsEnabled={open}
-            className={`${classNames({ [classes.popperClose]: !open })} ${classes.popper}`}
+            className={`${classNames({ [classes.popperClose]: !open })} ${
+              classes.popper
+            }`}
           >
             <ClickAwayListener onClickAway={this.handleClose}>
-              <Grow in={open} id="cat-menu-list" style={{ transformOrigin: "0 0 0" }}>
+              <Grow
+                in={open}
+                id="cat-menu-list"
+                style={{ transformOrigin: "0 0 0" }}
+              >
                 <Paper>
                   <MenuList role="menu">
                     <MenuItem key="all" onClick={this.handleFiltering}>
-                      all posts
+                      all
                     </MenuItem>
                     {categories.map(category => (
                       <MenuItem key={category} onClick={this.handleFiltering}>

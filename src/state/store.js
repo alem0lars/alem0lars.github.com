@@ -15,6 +15,7 @@ const SET_SCROLL_TO_TOP = "SET_SCROLL_TO_TOP";
 const SET_FONT_SIZE_INCREASE = "SET_FONT_SIZE_INCREASE";
 const SET_CATEGORY_FILTER = "SET_CATEGORY_FILTER";
 const SET_THEME = "SET_THEME";
+const SET_NAVIGATOR_ACTIVE_TAB_INDEX = "SET_NAVIGATOR_ACTIVE_TAB_INDEX";
 
 /*
  * action creators
@@ -50,6 +51,10 @@ export function setCategoryFilter(val) {
 
 export function setTheme(val) {
   return { type: SET_THEME, val };
+}
+
+export function setNavigatorActiveTabIndex(val) {
+  return { type: SET_NAVIGATOR_ACTIVE_TAB_INDEX, val };
 }
 
 /*
@@ -103,6 +108,12 @@ const reducer = (state, action) => {
       return {
         ...state,
         themeName: action.val
+      };
+
+    case SET_NAVIGATOR_ACTIVE_TAB_INDEX:
+      return {
+        ...state,
+        navigatorActiveTabIndex: action.val
       };
 
     default:
