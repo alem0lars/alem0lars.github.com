@@ -53,6 +53,7 @@
     "gatsby-remark-copy-linked-files": "^1.5.32",
     "gatsby-remark-external-links": "^0.0.4",
     "gatsby-remark-images": "^1.5.63",
+    "gatsby-remark-katex": "^1.0.14",
     "gatsby-remark-prismjs": "^1.2.22",
     "gatsby-remark-responsive-iframe": "^1.4.16",
     "gatsby-remark-smartypants": "^1.4.10",
