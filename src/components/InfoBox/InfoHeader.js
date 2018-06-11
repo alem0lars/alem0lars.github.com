@@ -1,9 +1,12 @@
 import React from "react";
-import PropTypes from "prop-types";
 import injectSheet from "react-jss";
-import Link from "gatsby-link";
-import IconButton from "material-ui/IconButton";
 
+import PropTypes from "prop-types";
+
+import Link from "gatsby-link";
+
+import IconButton from "material-ui/IconButton";
+import Tooltip from "material-ui/Tooltip";
 import ExpandMoreIcon from "material-ui-icons/ExpandMore";
 
 import avatar from "../../images/jpg/avatar.jpg";
@@ -111,16 +114,13 @@ const InfoHeader = props => {
 
   return (
     <header className={classes.header}>
-      <Link
-        className={classes.avatarLink}
-        onClick={avatarOnClick}
-        to="/"
-        title="back to Home page"
-      >
-        <div className={classes.avatar}>
-          <img src={avatar} alt="" />
-        </div>
-      </Link>
+      <Tooltip title="Back to Home" placement="right">
+        <Link className={classes.avatarLink} onClick={avatarOnClick} to="/">
+          <div className={classes.avatar}>
+            <img src={avatar} alt="" />
+          </div>
+        </Link>
+      </Tooltip>
       <h1 className={classes.title}>
         {infoTitle.replace(/ /g, "\u00a0")}
         <small>{infoTitleNote}</small>

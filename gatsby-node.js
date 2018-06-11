@@ -27,10 +27,8 @@ exports.onCreateNode = ({ node, getNode, boundActionCreators }) => {
 exports.createPages = ({ graphql, boundActionCreators }) => {
   const { createPage } = boundActionCreators;
 
-  return new Promise((resolve, reject) => {
-    const postTemplate = path.resolve("./src/templates/PostTemplate.js");
-    const pageTemplate = path.resolve("./src/templates/PageTemplate.js");
-    resolve(
+  return Promise.resolve()
+    .then(() =>
       graphql(
         `
           {
@@ -50,28 +48,31 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
             }
           }
         `
-      ).then(result => {
-        if (result.errors) {
-          console.log(result.errors);
-          reject(result.errors);
-        }
+      )
+    )
+    .then(result => {
+      if (result.errors) {
+        console.log(result.errors);
+        throw new Error(result.errors);
+      }
 
-        // Create posts and pages.
-        _.each(result.data.allMarkdownRemark.edges, edge => {
-          const slug = edge.node.fields.slug;
-          const isPost = /posts/.test(edge.node.id);
+      const postTemplate = path.resolve("./src/templates/PostTemplate.js");
+      const pageTemplate = path.resolve("./src/templates/PageTemplate.js");
 
-          createPage({
-            path: slug,
-            component: isPost ? postTemplate : pageTemplate,
-            context: {
-              slug: slug
-            }
-          });
+      // Create posts and pages.
+      _.each(result.data.allMarkdownRemark.edges, edge => {
+        const slug = edge.node.fields.slug;
+        const isPost = /posts/.test(edge.node.id);
+
+        createPage({
+          path: slug,
+          component: isPost ? postTemplate : pageTemplate,
+          context: {
+            slug: slug
+          }
         });
-      })
-    );
-  });
+      });
+    });
 };
 
 exports.modifyWebpackConfig = ({ config, stage }) => {

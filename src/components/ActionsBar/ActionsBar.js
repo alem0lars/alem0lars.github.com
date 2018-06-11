@@ -142,9 +142,9 @@ class ActionsBar extends React.Component {
     return (
       <div className={classes.actionsBar}>
         <div className={classes.group}>
-          <Tooltip title="Back to list" placement="left">
+          <Tooltip title="Back to Home" placement="left">
             <IconButton
-              aria-label="Back to list"
+              aria-label="Back to Home"
               onClick={this.homeOnClick}
               className={classes.button}
             >
