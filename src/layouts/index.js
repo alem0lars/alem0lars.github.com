@@ -173,16 +173,17 @@ export default connect(
   mapDispatchToProps
 )(injectSheet({})(Layout));
 
-// TODO slideshows (sort and right fields)
+// TODO slideshows (sort)
 //eslint-disable-next-line no-undef
 export const query = graphql`
   query LayoutQuery {
-    slideshows: allFile(
-      filter: { id: { regex: "//slideshows//" } }
-    ) {
+    slideshows: allSlideshowsJson {
       edges {
         node {
           name
+          title
+          subTitle
+          category
         }
       }
     }

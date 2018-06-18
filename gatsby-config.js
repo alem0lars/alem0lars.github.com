@@ -21,6 +21,7 @@ module.exports = {
     { resolve: `gatsby-plugin-offline` },
     pluginGoogleAnalytics,
     pluginFeed,
+    { resolve: `gatsby-transformer-json` },
     { resolve: `gatsby-plugin-sitemap` },
     { resolve: `gatsby-plugin-svgr` }
   ].concat(pluginFilesystem)

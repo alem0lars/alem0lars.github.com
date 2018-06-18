@@ -85,11 +85,11 @@ class List extends React.Component {
           }))
         : navigatorActiveTabIndex == 1
           ? slideshows.map(slideshow => ({
-              title: "THIS IS TITLE", // TODO
-              subTitle: "THIS IS SUBTITLE", // TODO
-              category: "slideshow", // TODO
-              slug: "/this-is-slug", // TODO
-              coverSrc: "/this-is-cover-src.jpg" // TODO
+              title: slideshow.node.title,
+              subTitle: slideshow.node.subTitle,
+              category: slideshow.node.category,
+              slug: `/slideshows/${slideshow.node.name}`,
+              coverSrc: `/slideshows/${slideshow.node.name}/cover.jpg`
             }))
           : [];
 

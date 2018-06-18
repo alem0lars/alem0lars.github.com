@@ -58,6 +58,7 @@
     "gatsby-remark-responsive-iframe": "^1.4.16",
     "gatsby-remark-smartypants": "^1.4.10",
     "gatsby-source-filesystem": "^1.5.35",
+    "gatsby-transformer-json": "^1.0.19",
     "gatsby-transformer-remark": "^1.7.41",
     "gatsby-transformer-sharp": "^1.6.24",
     "hoek": "4.2.1",
@@ -79,6 +80,8 @@
     "rebound": "^0.1.0",
     "redux": "^4.0.0",
     "redux-devtools-extension": "^2.13.2",
-    "screenfull": "^3.3.2"
+    "screenfull": "^3.3.2",
+    "spectacle": "^4.3.1",
+    "spectacle-code-slide": "^0.5.2"
   }
 }

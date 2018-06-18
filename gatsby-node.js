@@ -24,11 +24,11 @@ exports.onCreateNode = ({ node, getNode, boundActionCreators }) => {
   }
 };
 
-exports.createPages = ({ graphql, boundActionCreators }) => {
-  const { createPage } = boundActionCreators;
-
-  return Promise.resolve()
-    .then(() =>
+function createMarkdownPages(graphql, createPage) {
+  return new Promise((resolve, reject) => {
+    const postTemplate = path.resolve("./src/templates/PostTemplate.js");
+    const pageTemplate = path.resolve("./src/templates/PageTemplate.js");
+    resolve(
       graphql(
         `
           {
@@ -48,31 +48,83 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
             }
           }
         `
-      )
-    )
-    .then(result => {
-      if (result.errors) {
-        console.log(result.errors);
-        throw new Error(result.errors);
-      }
+      ).then(result => {
+        if (result.errors) {
+          console.log(result.errors);
+          reject(result.errors);
+        }
 
-      const postTemplate = path.resolve("./src/templates/PostTemplate.js");
-      const pageTemplate = path.resolve("./src/templates/PageTemplate.js");
+        // Create posts and pages.
+        _.each(result.data.allMarkdownRemark.edges, edge => {
+          const slug = edge.node.fields.slug;
+          const isPost = /posts/.test(edge.node.id);
 
-      // Create posts and pages.
-      _.each(result.data.allMarkdownRemark.edges, edge => {
-        const slug = edge.node.fields.slug;
-        const isPost = /posts/.test(edge.node.id);
-
-        createPage({
-          path: slug,
-          component: isPost ? postTemplate : pageTemplate,
-          context: {
-            slug: slug
-          }
+          createPage({
+            path: slug,
+            component: isPost ? postTemplate : pageTemplate,
+            context: {
+              slug: slug
+            }
+          });
         });
-      });
-    });
+      })
+    );
+  });
+}
+
+function createSlideshows(graphql, createPage) {
+  return new Promise((resolve, reject) => {
+    resolve(
+      graphql(
+        `
+          {
+            allSlideshowsJson {
+              edges {
+                node {
+                  name
+                  title
+                  subTitle
+                  category
+                }
+              }
+            }
+          }
+        `
+      ).then(result => {
+        if (result.errors) {
+          console.log(result.errors);
+          reject(result.errors);
+        }
+
+        _.each(result.data.allSlideshowsJson.edges, slideshow => {
+          const slug = `/slideshows/${slideshow.node.name}`;
+          const component = path.resolve(
+            ".",
+            "content",
+            "slideshows",
+            slideshow.node.name,
+            "index.js"
+          );
+
+          createPage({
+            path: slug,
+            component: component,
+            context: {
+              slug: slug
+            }
+          });
+        });
+      })
+    );
+  });
+}
+
+exports.createPages = ({ graphql, boundActionCreators }) => {
+  const { createPage } = boundActionCreators;
+  return Promise.all([
+    createMarkdownPages(graphql, createPage),
+    createSlideshows(graphql, createPage)
+  ]);
 };
 
 exports.modifyWebpackConfig = ({ config, stage }) => {
