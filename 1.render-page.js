@@ -157,7 +157,7 @@ exports.modules = {
 	    return _react2.default.createElement(
 	      "aside",
 	      {
-	        className: classes.infoBox + " " + (navigatorPosition ? navigatorPosition : "") + " \n        " + (navigatorShape ? navigatorShape : "")
+	        className: classes.infoBox + " " + (navigatorPosition ? navigatorPosition : "") + "\n        " + (navigatorShape ? navigatorShape : "")
 	      },
 	      info && _react2.default.createElement(_InfoHeader2.default, {
 	        info: info,
@@ -638,7 +638,12 @@ exports.modules = {
 	    }),
 	    _react2.default.createElement(
 	      _gatsbyLink2.default,
-	      { to: "/contact/", onClick: linkOnClick, className: classes.link, "data-shape": "closed" },
+	      {
+	        to: "/contact/",
+	        onClick: linkOnClick,
+	        className: classes.link,
+	        "data-shape": "closed"
+	      },
 	      "Contact"
 	    )
 	  );
@@ -666,13 +671,13 @@ exports.modules = {
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _propTypes = __webpack_require__(169);
-	
-	var _propTypes2 = _interopRequireDefault(_propTypes);
-	
 	var _reactJss = __webpack_require__(321);
 	
 	var _reactJss2 = _interopRequireDefault(_reactJss);
+	
+	var _propTypes = __webpack_require__(169);
+	
+	var _propTypes2 = _interopRequireDefault(_propTypes);
 	
 	var _gatsbyLink = __webpack_require__(220);
 	
@@ -681,6 +686,10 @@ exports.modules = {
 	var _IconButton = __webpack_require__(526);
 	
 	var _IconButton2 = _interopRequireDefault(_IconButton);
+	
+	var _Tooltip = __webpack_require__(584);
+	
+	var _Tooltip2 = _interopRequireDefault(_Tooltip);
 	
 	var _ExpandMore = __webpack_require__(683);
 	
@@ -798,17 +807,16 @@ exports.modules = {
 	    "header",
 	    { className: classes.header },
 	    _react2.default.createElement(
-	      _gatsbyLink2.default,
-	      {
-	        className: classes.avatarLink,
-	        onClick: avatarOnClick,
-	        to: "/",
-	        title: "back to Home page"
-	      },
+	      _Tooltip2.default,
+	      { title: "Back to Home", placement: "right" },
 	      _react2.default.createElement(
-	        "div",
-	        { className: classes.avatar },
-	        _react2.default.createElement("img", { src: _avatar3.default, alt: "" })
+	        _gatsbyLink2.default,
+	        { className: classes.avatarLink, onClick: avatarOnClick, to: "/" },
+	        _react2.default.createElement(
+	          "div",
+	          { className: classes.avatar },
+	          _react2.default.createElement("img", { src: _avatar3.default, alt: "" })
+	        )
 	      )
 	    ),
 	    _react2.default.createElement(
