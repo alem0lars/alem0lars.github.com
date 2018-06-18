@@ -157,6 +157,9 @@ const theme = createMuiTheme({
     action: {
       hover: "rgba(0, 0, 0, 0.01)"
     }
+  },
+  separator: {
+    color: "#ddd"
   }
 });
 

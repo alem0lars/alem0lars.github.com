@@ -2,8 +2,8 @@ import lightTheme from "./light-theme";
 import darkTheme from "./dark-theme";
 
 export const themes = [
-  { name: "light", data: lightTheme },
-  { name: "dark", data: darkTheme }
+  { name: "dark", data: darkTheme },
+  { name: "light", data: lightTheme }
 ];
 
 export const getDefaultTheme = () => themes[0];

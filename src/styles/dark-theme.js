@@ -13,7 +13,7 @@ const theme = createMuiTheme({
         .lighten(0.1)
         .string(),
       accent: colors.accent,
-      lines: colors.gray
+      lines: colors.dark
     },
     sizes: {
       linesMargin: "20px"

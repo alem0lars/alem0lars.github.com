@@ -8,6 +8,5 @@ export const initialState = {
   scrollToTop: false,
   fontSizeIncrease: 1,
   categoryFilter: "all",
-  themeName: getDefaultTheme().name,
-  navigatorActiveTabIndex: 0
+  themeName: getDefaultTheme().name
 };

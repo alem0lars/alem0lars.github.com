@@ -46,7 +46,7 @@ const styles = theme => ({
     width: "36px",
     height: "36px",
     borderRadius: "65% 75%",
-    border: "1px solid #ddd",
+    border: `1px solid ${theme.base.colors.lines}`,
     transition: "all .3s",
     transitionTimingFunction: "ease",
     display: "inline-block",

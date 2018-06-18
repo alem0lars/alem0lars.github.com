@@ -51,7 +51,7 @@ const styles = theme => ({
   avatar: {
     width: "36px",
     borderRadius: "65% 75%",
-    border: "1px solid #ddd",
+    border: `1px solid ${theme.base.colors.lines}`,
     height: "36px"
   }
 });

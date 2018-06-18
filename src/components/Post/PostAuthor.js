@@ -10,7 +10,7 @@ const styles = theme => ({
   author: {
     margin: "3em 0 0",
     padding: "3em 0 0",
-    borderTop: "1px solid #ddd",
+    borderTop: `1px solid ${theme.base.colors.lines}`,
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
@@ -27,7 +27,7 @@ const styles = theme => ({
     borderRadius: "75% 65%",
     width: "60px",
     height: "60px",
-    border: "1px solid #ddd",
+    border: `1px solid ${theme.base.colors.lines}`,
     flexShrink: 0,
     [`@media (min-width: ${theme.mediaQueryTresholds.M}px)`]: {
       margin: "0 1em 0"

@@ -63,6 +63,8 @@ class List extends React.Component {
       classes
     } = this.props;
 
+    console.log(posts);
+
     const elements = posts.map(post => ({
       title: post.node.frontmatter.title,
       subTitle: post.node.frontmatter.subTitle,

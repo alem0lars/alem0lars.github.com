@@ -6,7 +6,7 @@ cover: entropy-cover.jpg
 status: "Done"
 revision: 1
 confidence: "Almost Certain"
-importance: 6
+importance: 5
 ---
 
 In Linux, sometimes you may need to generate some entropy.
