@@ -72,59 +72,9 @@ function createMarkdownPages(graphql, createPage) {
   });
 }
 
-function createSlideshows(graphql, createPage) {
-  return new Promise((resolve, reject) => {
-    resolve(
-      graphql(
-        `
-          {
-            allSlideshowsJson {
-              edges {
-                node {
-                  name
-                  title
-                  subTitle
-                  category
-                }
-              }
-            }
-          }
-        `
-      ).then(result => {
-        if (result.errors) {
-          console.log(result.errors);
-          reject(result.errors);
-        }
-
-        _.each(result.data.allSlideshowsJson.edges, slideshow => {
-          const slug = `/slideshows/${slideshow.node.name}`;
-          const component = path.resolve(
-            ".",
-            "content",
-            "slideshows",
-            slideshow.node.name,
-            "index.js"
-          );
-
-          createPage({
-            path: slug,
-            component: component,
-            context: {
-              slug: slug
-            }
-          });
-        });
-      })
-    );
-  });
-}
-
 exports.createPages = ({ graphql, boundActionCreators }) => {
   const { createPage } = boundActionCreators;
-  return Promise.all([
-    createMarkdownPages(graphql, createPage),
-    createSlideshows(graphql, createPage)
-  ]);
+  return Promise.all([createMarkdownPages(graphql, createPage)]);
 };
 
 exports.modifyWebpackConfig = ({ config, stage }) => {

@@ -5,10 +5,6 @@ import { connect } from "react-redux";
 
 import PropTypes from "prop-types";
 
-import Tabs from "material-ui/Tabs/Tabs";
-import Tab from "material-ui/Tabs/Tab";
-
-import { setNavigatorActiveTabIndex } from "../../state/store";
 import ListHeader from "./ListHeader";
 import SpringScrollbars from "../SpringScrollbars";
 import ListItem from "./ListItem";
@@ -55,43 +51,25 @@ class List extends React.Component {
     }
   }
 
-  handleNavigatorActiveTabChange = (event, value) => {
-    this.props.setNavigatorActiveTabIndex(value);
-  };
-
   render() {
     const {
       posts,
-      slideshows,
       linkOnClick,
       expandOnClick,
       categoryFilter,
       navigatorShape,
       removeFilter,
 
-      classes,
-
-      navigatorActiveTabIndex
+      classes
     } = this.props;
 
-    const elements =
-      navigatorActiveTabIndex == 0
-        ? posts.map(post => ({
-            title: post.node.frontmatter.title,
-            subTitle: post.node.frontmatter.subTitle,
-            category: post.node.frontmatter.category,
-            slug: post.node.fields.slug,
-            coverSrc: post.node.frontmatter.cover.children[0].resolutions.src
-          }))
-        : navigatorActiveTabIndex == 1
-          ? slideshows.map(slideshow => ({
-              title: slideshow.node.title,
-              subTitle: slideshow.node.subTitle,
-              category: slideshow.node.category,
-              slug: `/slideshows/${slideshow.node.name}`,
-              coverSrc: `/slideshows/${slideshow.node.name}/cover.jpg`
-            }))
-          : [];
+    const elements = posts.map(post => ({
+      title: post.node.frontmatter.title,
+      subTitle: post.node.frontmatter.subTitle,
+      category: post.node.frontmatter.category,
+      slug: post.node.fields.slug,
+      coverSrc: post.node.frontmatter.cover.children[0].resolutions.src
+    }));
 
     return (
       <div className={classes.posts}>
@@ -105,14 +83,6 @@ class List extends React.Component {
             />
 
             <div className={classes.list}>
-              <Tabs
-                value={navigatorActiveTabIndex}
-                onChange={this.handleNavigatorActiveTabChange}
-              >
-                <Tab label="Posts" />
-                <Tab label="Slideshows" />
-              </Tabs>
-
               <ul>
                 {elements &&
                   elements.map((element, i) => (
@@ -134,7 +104,6 @@ class List extends React.Component {
 
 List.propTypes = {
   posts: PropTypes.array.isRequired,
-  slideshows: PropTypes.array.isRequired,
   navigatorPosition: PropTypes.string.isRequired,
   navigatorShape: PropTypes.string.isRequired,
   linkOnClick: PropTypes.func.isRequired,
@@ -142,20 +111,12 @@ List.propTypes = {
   categoryFilter: PropTypes.string.isRequired,
   removeFilter: PropTypes.func.isRequired,
 
-  classes: PropTypes.object.isRequired,
-
-  navigatorActiveTabIndex: PropTypes.number.isRequired,
-
-  setNavigatorActiveTabIndex: PropTypes.func.isRequired
+  classes: PropTypes.object.isRequired
 };
 
-const mapStateToProps = (state, ownProps) => ({
-  navigatorActiveTabIndex: state.navigatorActiveTabIndex
-});
+const mapStateToProps = (state, ownProps) => ({});
 
-const mapDispatchToProps = {
-  setNavigatorActiveTabIndex
-};
+const mapDispatchToProps = {};
 
 export default connect(
   mapStateToProps,

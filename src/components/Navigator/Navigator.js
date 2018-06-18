@@ -123,7 +123,6 @@ class Navigator extends React.Component {
     const {
       classes,
       posts,
-      slideshows,
       navigatorPosition,
       navigatorShape,
       categoryFilter
@@ -138,7 +137,6 @@ class Navigator extends React.Component {
         {this.props.posts.length && (
           <List
             posts={posts}
-            slideshows={slideshows}
             navigatorPosition={navigatorPosition}
             navigatorShape={navigatorShape}
             linkOnClick={this.linkOnClick}
@@ -154,7 +152,6 @@ class Navigator extends React.Component {
 
 Navigator.propTypes = {
   posts: PropTypes.array.isRequired,
-  slideshows: PropTypes.array.isRequired,
 
   classes: PropTypes.object.isRequired,
 

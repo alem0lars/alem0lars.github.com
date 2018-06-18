@@ -106,10 +106,7 @@ class Layout extends React.Component {
         >
           {children()}
           <GlobalStyles />
-          <Navigator
-            posts={data.posts.edges}
-            slideshows={data.slideshows.edges}
-          />
+          <Navigator posts={data.posts.edges} />
           <ActionsBar categories={this.categories} />
           <InfoBar pages={data.pages.edges} parts={data.parts.edges} />
           {this.props.isWideScreen && (
@@ -173,20 +170,9 @@ export default connect(
   mapDispatchToProps
 )(injectSheet({})(Layout));
 
-// TODO slideshows (sort)
 //eslint-disable-next-line no-undef
 export const query = graphql`
   query LayoutQuery {
-    slideshows: allSlideshowsJson {
-      edges {
-        node {
-          name
-          title
-          subTitle
-          category
-        }
-      }
-    }
     posts: allMarkdownRemark(
       filter: { id: { regex: "//posts//" } }
       sort: { fields: [fields___prefix], order: DESC }
